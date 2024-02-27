@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single book info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <nav class="close">
+        <div class="logo-name">
+            <a href="../index.html"><h1>B<span class="link-name">iblioteka</span></h1></a>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html">
+                        <i class="fa-solid fa-gauge"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../librarians.html">
+                        <i class="fa-solid fa-address-book"></i>
+                        <span class="link-name">Bibliotekari</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../students.html">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="link-name">Ucenici</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../books.html">
+                        <i class="fa-solid fa-copy"></i>
+                        <span class="link-name">Knjige</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../authors.html">
+                        <i class="fa-solid fa-address-book"></i>
+                        <span class="link-name">Autori</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../book-rental.html">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <span class="link-name">Izdavanje knjiga</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="settings">
+                <li>
+                    <a href="../settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="link-name">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <header>
+            <div class="top">
+                <i class="fa-solid fa-bars sidebar-toggle"></i>
+    
+                <div class="user-settings">
+                    <div class="create-users">
+                        <a href="#" class="user-create-btn">Kreiraj</a>
+                    </div>
+
+                    <div class="dash-new-users hidden">
+                        <ul>
+                            <li><a href="../new-content/new-librarian.html"><span><i class="fa-solid fa-address-book"></i></span>Bibliotekar</a></li>
+                            <li><a href="../new-content/new-student.html"><span><i class="fa-solid fa-users"></i></span>Ucenik</a></li>
+                            <li><a href="../new-content/new-book.html"><span><i class="fa-solid fa-book"></i></span>Knjiga</a></li>
+                            <li><a href="../new-content/new-author.html"><span><i class="fa-regular fa-address-book"></i></span>Autor</a></li>
+                        </ul>
+                    </div><!-- end .dash-new-users -->
+
+                    <div class="account-profile-options hidden">
+                        <ul>
+                            <li><a href="single-admin-info.html"><span><i class="fa-solid fa-address-book"></i></span>Profile</a></li>
+                            <li><a href="#"><span><i class="fa-solid fa-right-from-bracket"></i></span>Log out</a></li>
+                        </ul>
+                    </div><!-- end .account-profile-options-hidden-->
+    
+                    <div class="user-account">
+                        <a href="#" class="user-profile-options"><img src="../images/accounts.jpg" alt="profile-photo"></a>
+                    </div><!-- end .user-account -->
+                </div>
+            </div>
+        </header>
+
+        <div class="book-modal">
+
+            <div class="overview">
+                <div class="title">
+                    <h2>Tom Sojer</h2>
+                    <p><a href="../books.html">Evidencija knjiga</a> / Knjiga - 467</p>
+                </div>
+
+                <div class="single-user-profile-options">
+                    <ul>
+                        <li><a href="single-book-options/release-the-book.html"><i class="fa-solid fa-arrow-turn-up"></i> Otpisi knjigu</a></li>
+                        <li><a href="single-book-options/rent-a-book.html"><i class="fa-solid fa-pen-to-square"></i> Izdaj knjigu</a></li>
+                        <li><a href="single-book-options/return-the-book.html"><i class="fa-solid fa-arrow-rotate-right"></i> Vrati knjigu</a></li>
+                        <li><a href="single-book-options/reserve-a-book.html"><i class="fa-solid fa-calendar-days"></i> Rezervisi knjigu</a></li>
+                        <li><a href="single-book-info.html" class="all-single-user-profile-options"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- end .overview -->
+
+            <div class="book-modal-content">
+
+                <div class="book-modal-main">
+
+                    <div class="book-modal-main-tabs">
+                        <ul>
+                            <li>
+                                <a href="#" class="book-modal-main__toggle is-active">Osnovni detalji</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="book-modal-main__toggle">Specifikacija</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="book-modal-main__toggle">Evidencija iznajmljivanja</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="book-modal-main__toggle">Multimedija</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="book-modal-content-container">
+
+                        <div class="book-modal-main__content is-active">
+
+                            <div class="book-main-content-details-wrapper">
+                                <div class="book-main-details">
+                                    <div>
+                                        <p>Naziv knjige</p>
+                                        <h5>Tom Sojer</h5>
+                                    </div>
+    
+                                    <div>
+                                        <p>Kategorija</p>
+                                        <h5>Romani</h5>
+                                    </div>
+    
+                                    <div>
+                                        <p>Zanr</p>
+                                        <h5>Knjige za djecu</h5>
+                                    </div>
+    
+                                    <div>
+                                        <p>Autor/i</p>
+                                        <h5>Mark Twain</h5>
+                                    </div>
+    
+                                    <div>
+                                        <p>Izdavac</p>
+                                        <h5>Delfi knjizare</h5>
+                                    </div>
+    
+                                    <div>
+                                        <p>Godina izdavanja</p>
+                                        <h5>30.03.2011</h5>
+                                    </div>
+                                </div>
+    
+                                <div class="book-storyline">
+                                    <h6>Storyline (Kratki sadrzaj)</h6>
+                                    <p>Roman prati razlicite dogodovstine ovog nadasve neobicnog djecaka. Na samom pocetku tetka Pola doziva djecaka na rucak, a on se naravno mota tuda - svuda. Vec na samom pocetku romana jasno je definisan lik Toma Sojera kao kavgadzije, koji izaziva druge. U zelji da ga kazni sto se potukao sa jednim djecakom, tetka trazi od Toma da ofarba cijelu ogradu. Tu na scenu stupa Tomov vrcav duh i snalazljivost. Naime, on u svakoj situaciji u kojoj se nadje, bez obzira koliko ona bila mozda neprijatna, pronalazi nesto dobro. Tako i u ovoj, on posao koji mora da uradi jer mu je tetka tako nalozila, pretvara u pravu zabau, okupivsi mnogo djecaka...</p>
+                                    <a href="#">Prikazi vise &raquo;</a>
+                                </div>
+                            </div>
+
+                        </div><!-- end .book-modal-main__content-->
+
+                        <div class="book-modal-main__content specification">
+                            <div class="book-main-details">
+                                <div>
+                                    <p>Broj strana</p>
+                                    <h5>264</h5>
+                                </div>
+
+                                <div>
+                                    <p>Pismo</p>
+                                    <h5>Cirilica</h5>
+                                </div>
+
+                                <div>
+                                    <p>Jezik</p>
+                                    <h5>Crnogorski</h5>
+                                </div>
+
+                                <div>
+                                    <p>Povez</p>
+                                    <h5>Tvrd</h5>
+                                </div>
+
+                                <div>
+                                    <p>Format</p>
+                                    <h5>21 cm</h5>
+                                </div>
+
+                                <div>
+                                    <p>International Standard Book Number (ISBN)</p>
+                                    <h5>154631287568</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="book-modal-main__content rental-info">
+                            <div class="rental-info-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-book"></i>
+                                            <span class="link-name">Izdate knjige</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-copy"></i>
+                                            <span class="link-name">Vracene knjige</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-circle-exclamation"></i>
+                                            <span class="link-name">Knjige u prekoracenju</span>
+                                        </a>
+                                    </li>
+                               
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-calendar-check"></i>
+                                            <span class="link-name">Aktivne rezervacije</span>
+                                        </a>
+                                    </li>
+            
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span class="link-name">Arhivirane rezervacije</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="rental-info-content">
+                                <table class="books-table">
+                                    <thead>
+                                        <tr>
+                                            <td>Izdato uceniku</td>
+                                            <td>Datum izdavanja</td>
+                                            <td>Trenutno zadrzavanje</td>
+                                            <td>Knjigu izdao</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </thead>
+        
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Izdato uceniku">Pero Perovic</td>
+                                            <td data-label="Datum izdavanja">21.02.2021</td>
+                                            <td data-label="Trenutno zadrzavanje">2 nedelje i 3 dana</td>
+                                            <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                                            <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                                            <td data-label="Datum izdavanja">15.05.2021</td>
+                                            <td data-label="Trenutno zadrzavanje">5 dana</td>
+                                            <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                                            <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td data-label="Izdato uceniku">Milos Milosevic</td>
+                                            <td data-label="Datum izdavanja">27.06.2021</td>
+                                            <td data-label="Trenutno zadrzavanje">1 nedelja i 4 dana</td>
+                                            <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                                            <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                                            <td data-label="Datum izdavanja">09.07.2021</td>
+                                            <td data-label="Trenutno zadrzavanje" class="table-danger">1 mjesec i 6 dana</td>
+                                            <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                                            <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td data-label="Izdato uceniku">Pero Perovic</td>
+                                            <td data-label="Datum izdavanja">22.08.2021</td>
+                                            <td data-label="Trenutno zadrzavanje" class="table-danger">3 mjeseca i 2 nedelje</td>
+                                            <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                                            <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                                            <td data-label="Datum izdavanja">30.10.2021</td>
+                                            <td data-label="Trenutno zadrzavanje">9 dana</td>
+                                            <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                                            <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td data-label="Izdato uceniku">Milos Milosevic</td>
+                                            <td data-label="Datum izdavanja">27.11.2021</td>
+                                            <td data-label="Trenutno zadrzavanje">2 nedelje i 4 dana</td>
+                                            <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                                            <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                                            <td data-label="Datum izdavanja">11.12.2021</td>
+                                            <td data-label="Trenutno zadrzavanje">3 nedelje i 6 dana</td>
+                                            <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                                            <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="book-modal-main__content multimedia">
+                            <div>
+                                <label for="add-book-multimedia">Drop files to attach, <span>or browse</span></label>
+                                <input type="file" name="add-book-multimedia" id="add-book-multimedia">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div><!-- end .book-modal-main -->
+
+                <div class="book-modal-sidebar">
+
+                    <div class="sidebar-top">
+                        <div class="sidebar-top-info">
+                            <p>Na raspolaganju:</p>
+                            <p class="table-success">5 primjeraka</p>
+                        </div>
+                        <div class="sidebar-top-info">
+                            <p>Rezervisano:</p>
+                            <p class="sidebar-important-info">2 primjerka</p>
+                        </div>
+                        <div class="sidebar-top-info">
+                            <p>Izdato:</p>
+                            <p class="sidebar-important-info">10</p>
+                        </div>
+                        <div class="sidebar-top-info">
+                            <p>U prekoracenju:</p>
+                            <p class="table-danger">2 primjerka</p>
+                        </div>
+                        <div class="sidebar-top-info">
+                            <p>Ukupna kolicina:</p>
+                            <p class="bold-info">15 primjeraka</p>
+                        </div>
+                    </div><!-- end .sidebar-top -->
+
+                    <div class="sidebar-bottom">
+                        <div class="sidebar-bottom-info">
+                            <p>IZDAVANJE KNJIGE - 4 days ago</p>
+                            <p><a href="single-librarian-info.html">Valentina K.</a> je izdala knjigu <a href="single-student-info.html">Peru Perovicu</a> dana 21.02.2022</p>
+                            <a href="../book-rental.html">Pogledaj detalje &raquo;</a>
+                        </div>
+
+                        <div class="sidebar-bottom-info">
+                            <p>IZDAVANJE KNJIGE - 3 months ago</p>
+                            <p><a href="single-librarian-info.html">Jelena C.</a> je izdala knjigu <a href="single-student-info.html">Borisu Cetkovicu</a> dana 15.08.2022</p>
+                            <a href="../book-rental.html">Pogledaj detalje &raquo;</a>
+                        </div>
+
+                        <div class="sidebar-bottom-info">
+                            <p>IZDAVANJE KNJIGE - 11 days ago</p>
+                            <p><a href="single-librarian-info.html">Snezana Z.</a> je izdala knjigu <a href="single-student-info.html">Vladimiru Karasu</a> dana 10.09.2022</p>
+                            <a href="../book-rental.html">Pogledaj detalje &raquo;</a>
+                        </div>
+
+                        <div class="sidebar-show-all">
+                            <a href="../index.html"><i class="fa-solid fa-arrow-rotate-left"></i> Prikazi sve</a>
+                        </div>
+                    </div>
+
+                </div><!-- end .book-modal-sidebar -->
+
+            </div><!-- end .book-modal-content -->
+
+        </div><!-- end .book-modal -->
+
+    </section><!-- end .dashboard-->
+
+    <script src="../app/script.js"></script>
+    <script src="../app/single-book-info.js"></script>
+</body>
+</html>

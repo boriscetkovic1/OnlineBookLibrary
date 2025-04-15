@@ -1,0 +1,1789 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+:root {
+  /* Colors */
+  --primary-dark-color: #2c3e50;
+  --secondary-dark-color: #7f8c8d;
+  --primary-light-color: #ffffff;
+  --secondary-light-color: #ecf0f1;
+  --primary-link-color: #007bff;
+  --success-btn-color: #27ae60;
+  --danger-btn-color: #c0392b;
+  --warning-btn-color: #f39c12;
+  --text-color: #000;
+  --black-light-color: #bdc3c7;
+  --border-color: #e6e5e5;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background-color: var(--primary-dark-color);
+  border-right: 1px solid var(--border-color);
+}
+
+nav.close {
+  width: 73px;
+}
+
+nav h1 {
+  margin: 0.5rem 0 0 1rem;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary-light-color);
+}
+
+nav.close .link-name {
+  opacity: 0;
+}
+
+nav .menu-items {
+  margin-top: 40px;
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-items li a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-items li a i {
+  font-size: 24px;
+  min-width: 45px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light-color);
+}
+
+.menu-items li a .link-name {
+  color: var(--primary-light-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+nav.close li a .link-name {
+  opacity: 0;
+}
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name,
+.settings li a:hover i,
+.settings li a:hover .link-name {
+  color: var(--secondary-dark-color);
+}
+
+.settings {
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.dashboard {
+  position: relative;
+  left: 250px;
+  background-color: var(--primary-light-color);
+  width: calc(100% - 250px);
+  padding: 10px 14px;
+}
+
+nav.close ~ .dashboard {
+  left: 73px;
+  width: calc(100% - 73px);
+}
+
+.dashboard .top {
+  position: fixed;
+  left: 250px;
+  top: 0;
+  width: calc(100% - 250px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: var(--secondary-light-color);
+  z-index: 1000;
+}
+
+nav.close ~ .dashboard .top {
+  left: 73px;
+  width: calc(100% - 73px);
+  z-index: 1000;
+}
+
+.dashboard .top .sidebar-toggle {
+  font-size: 26px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.dashboard .top .user-settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top .user-create-btn {
+  margin-right: 10px;
+  background-color: var(--secondary-dark-color);
+  color: var(--primary-light-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.top .user-settings .user-create-btn:hover {
+  background-color: var(--primary-dark-color);
+}
+
+.user-settings .user-account img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.dashboard .dash-content {
+  padding-top: 50px;
+}
+
+.overview {
+  border-bottom: 2px solid var(--border-color);
+  margin: 15px 0;
+  padding-bottom: 10px;
+}
+
+.overview .title h1,
+.overview .title h2 {
+  color: var(--primary-dark-color);
+  padding-bottom: 5px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.overview .title p {
+  font-size: 12px;
+  color: var(--primary-link-color);
+}
+
+.dash-content,
+.librarians-content,
+.students-content,
+.books-content,
+.book-rental-content,
+.settings-content {
+  width: 100%;
+}
+
+.librarians-content,
+.students-content,
+.books-content,
+.book-rental-content,
+.settings-content,
+.new-content {
+  margin-top: 70px;
+}
+
+.dash-main-content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.dash-main-content h3 {
+  color: var(--text-color);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.dash-main-content h2 {
+  color: var(--text-color);
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.dash-activities {
+  flex-basis: 50%;
+  margin-right: 50px;
+}
+
+.dash-activities .single-activity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.single-activity .user-photo img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.single-activity .activity-info {
+  margin-left: 10px;
+}
+
+.single-activity .activity-info a {
+  color: var(--primary-link-color);
+}
+
+.single-activity .activity-info a:hover {
+  color: var(--success-btn-color);
+}
+
+.activity-info .time {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.activity-info .activity-details p {
+  font-size: 14px;
+}
+
+.activity-details .important-info {
+  color: var(--primary-link-color);
+}
+
+.bold-info {
+  font-weight: 700;
+}
+
+.important-info {
+  color: var(--primary-link-color);
+}
+
+.show-all-activities-btn {
+  width: 75%;
+}
+
+.show-all-activities-btn .showAll {
+  display: inline-block;
+  width: 90%;
+  padding: 7px;
+  font-size: 14px;
+  background-color: var(--primary-light-color);
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+}
+
+.show-all-activities-btn .showAll:hover {
+  background-color: var(--primary-link-color);
+  color: var(--secondary-light-color);
+  border: 2px solid var(--primary-link-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.dash-reservation .single-reservation {
+  display: flex;
+  align-items: center;
+}
+
+.single-reservation {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  width: 530px;
+}
+
+.single-reservation div {
+  margin: 0 15px;
+}
+
+.single-reservation-user i {
+  font-size: 22px;
+  margin-right: 5px;
+  color: var(--secondary-dark-color);
+}
+
+.single-reservation .reservation-check i {
+  margin: 0 10px;
+  font-size: 22px;
+}
+
+.single-reservation .single-reservation-date {
+  background-color: var(--secondary-light-color);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.show-all-reservations a {
+  color: var(--primary-link-color);
+}
+
+.show-all-reservations i {
+  margin: 0 10px;
+}
+
+.table-container {
+  margin-bottom: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr {
+  border: 1px solid var(--black-light-color);
+}
+
+table thead {
+  border-bottom: 2px solid var(--black-light-color);
+}
+
+table tr td {
+  height: 60px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+table tr td .checkbox {
+  margin-right: 15px;
+}
+
+table tr td img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+table tr td i {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.table-danger {
+  color: var(--danger-btn-color);
+  font-weight: bold;
+}
+
+.table-success {
+  color: var(--success-btn-color);
+  font-weight: bold;
+}
+
+.table-warning {
+  color: var(--warning-btn-color);
+  font-weight: bold;
+}
+
+.book-cover-img {
+  border-radius: 0;
+  height: 25px;
+  width: 20px;
+  border: 2px solid var(--primary-dark-color);
+}
+
+.important-info-table {
+  color: var(--primary-link-color);
+}
+
+.members {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.members .new-member a {
+  background-color: var(--primary-link-color);
+  color: var(--primary-light-color);
+  padding: 10px 25px;
+  border: 2px solid var(--primary-dark-color);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.members .new-member a:hover {
+  background-color: var(--success-btn-color);
+  border: 2px solid var(--success-btn-color);
+  padding: 10px 25px;
+}
+
+.search-members {
+  display: flex;
+}
+
+.search-members input {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+}
+
+.search-members button {
+  padding: 10px 5px;
+  background-color: var(--primary-light-color);
+  font-size: 16px;
+  border: none;
+}
+
+.members .new-member input {
+  padding: 10px;
+  width: 400px;
+  margin-right: 10px;
+}
+
+.authors-content {
+  margin-top: 70px;
+}
+
+.book-rental-main-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.book-rental-actions {
+  width: 18%;
+  margin-right: auto;
+}
+
+.book-rental-table {
+  width: 80%;
+}
+
+.book-rental-table .members .new-member a {
+  border: none;
+}
+
+.book-rental-table .members .search-members input,
+.book-rental-table .members .search-members button {
+  border: none;
+}
+
+.book-rental-actions-links li,
+.book-rental-actions-info li {
+  padding: 0 0 15px 0;
+}
+
+.book-rental-actions-links a,
+.book-rental-actions-info a {
+  color: var(--primary-dark-color);
+  font-size: 16px;
+  padding: 3px 7px;
+}
+
+.book-rental-actions-links a:hover,
+.book-rental-actions-info a:hover {
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.book-rental-actions-links {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--black-light-color);
+  align-self: flex-start;
+}
+
+.book-rental-actions-info {
+  padding-top: 20px;
+}
+
+.knjige__toggle.is-active {
+  color: var(--secondary-dark-color);
+  border-radius: 3px;
+}
+
+.knjige__content {
+  display: none;
+}
+
+.knjige__content.is-active {
+  display: block;
+}
+
+.settings-tabs,
+.single-student-tabs {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.settings-tabs ul,
+.single-student-tabs ul {
+  display: flex;
+}
+
+.settings-tabs ul li,
+.single-student-tabs ul li {
+  padding: 0 20px 0 0;
+}
+
+.settings-tabs ul li a,
+.single-student-tabs ul li a {
+  color: var(--secondary-dark-color);
+}
+
+.settings-tabs ul li a:hover,
+.single-student-tabs ul li a:hover {
+  color: var(--primary-dark-color);
+}
+
+.settings__toggle.is-active {
+  color: var(--primary-link-color);
+  border-bottom: 1px solid var(--primary-link-color);
+  padding-bottom: 15px;
+}
+
+.settings__content,
+.single-student__content {
+  display: none;
+}
+
+.single-student__toggle.is-active {
+  color: var(--primary-link-color);
+}
+
+.settings__content.is-active,
+.single-student__content.is-active {
+  display: block;
+}
+
+.settings-content .time-limit {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+}
+
+.single-student-info-content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.single-student-info-content .single-student-nav {
+  margin-right: 20px;
+}
+
+.single-student-nav ul li {
+  margin-bottom: 20px;
+}
+
+.single-student-nav ul li a {
+  color: var(--primary-dark-color);
+}
+
+.single-student-nav ul li a:hover {
+  color: var(--black-light-color);
+}
+
+.single-student-nav ul li a.is-active {
+  color: var(--secondary-dark-color);
+}
+
+.single-student-info__toggle.is-active {
+  color: var(--black-light-color);
+}
+
+.single-student-info__content {
+  display: none;
+}
+
+.single-student-info__content.is-active {
+  display: block;
+}
+
+.time-limit .deadline-paragraph {
+  margin-right: 50px;
+}
+
+.time-limit .deadline-paragraph p {
+  font-size: 14px;
+}
+
+.time-limit .deadline-days input {
+  padding: 6px;
+  margin-right: 10px;
+  border: 1px solid var(--black-light-color);
+}
+
+.new-settings-style a {
+  display: inline-block;
+  background-color: var(--primary-link-color);
+  color: var(--primary-light-color);
+  padding: 7px 20px;
+  margin-bottom: 30px;
+  border: 2px solid var(--primary-dark-color);
+  border-radius: 4px;
+}
+
+.new-settings-style a:hover {
+  background-color: var(--success-btn-color);
+  border: 2px solid var(--success-btn-color);
+}
+
+.settings__content table tr td i {
+  margin-right: 10px;
+}
+
+.reservations-statistics {
+  flex-basis: 50%;
+}
+
+.dashboard-reservation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.dashboard-reservation:hover {
+  background-color: var(--secondary-light-color);
+}
+
+.dashboard-reservation div i {
+  margin: 0 10px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dashboard-reservation .dashboard-reservation-date {
+  background-color: var(--border-color);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.dashboard-reservation .fa-check:hover {
+  color: var(--success-btn-color);
+}
+
+.dashboard-reservation .fa-xmark:hover {
+  color: var(--danger-btn-color);
+}
+
+.dashboard-reservation-show-all {
+  color: var(--primary-link-color);
+  text-align: end;
+  margin-bottom: 20px;
+}
+
+.dashboard-reservation-show-all a {
+  color: var(--primary-link-color);
+}
+
+.dashboard-reservation-show-all a:hover {
+  color: var(--success-btn-color);
+}
+
+.new-content .new-user-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-data {
+  flex-basis: 40%;
+  margin-right: 40px;
+}
+
+.user-add-photo {
+  flex-basis: 60%;
+}
+
+.new-content label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.new-content input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+}
+
+.new-content input.add-user-photo {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+}
+
+.new-content select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.new-user-action-buttons {
+  position: fixed;
+  bottom: 15px;
+  right: 5px;
+  padding: 10px;
+  z-index: 5;
+}
+
+.new-user-action-buttons a {
+  padding: 5px 15px;
+  margin: 0 0 0 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.new-user-action-buttons a.btn-cancel {
+  background-color: var(--primary-light-color);
+  border: 2px solid var(--primary-dark-color);
+  color: var(--primary-dark-color);
+}
+
+.new-user-action-buttons a.btn-cancel:hover {
+  background-color: var(--danger-btn-color);
+  color: var(--secondary-light-color);
+  border: 2px solid var(--danger-btn-color);
+  padding: 7px 20px;
+}
+
+.new-user-action-buttons a.btn-save {
+  background-color: var(--primary-link-color);
+  color: var(--primary-light-color);
+  border: 2px solid var(--secondary-dark-color);
+}
+
+.new-user-action-buttons a.btn-save:hover {
+  background-color: var(--success-btn-color);
+  border: 2px solid var(--success-btn-color);
+  padding: 7px 20px;
+}
+
+.authors-content .autor-data {
+  display: inline-block;
+}
+
+.new-author .autor-data .user-data input {
+  width: 500px;
+}
+
+.new-author .autor-data .user-data textarea {
+  width: 500px;
+  height: 200px;
+  resize: none;
+  border: 2px solid var(--border-color);
+}
+
+.knjiga-data textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+  padding: 10px;
+  resize: none;
+  border: 2px solid var(--border-color);
+}
+
+.knjiga-data select {
+  border: 2px solid var(--border-color);
+}
+
+.dashboard .top .user-settings {
+  position: relative;
+}
+
+.dashboard .top .dash-new-users {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  width: 200px;
+  background-color: var(--primary-light-color);
+  border: 2px solid var(--border-color);
+  padding: 15px;
+}
+
+.dashboard .top .account-profile-options {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 200px;
+  background-color: var(--primary-light-color);
+  border: 2px solid var(--border-color);
+  padding: 15px;
+}
+
+.dashboard .top .dash-new-users li,
+.dashboard .top .account-profile-options li {
+  margin-bottom: 15px;
+}
+
+.dashboard .top .dash-new-users li a,
+.dashboard .top .account-profile-options li a {
+  color: var(--primary-dark-color);
+}
+
+.dashboard .top .account-profile-options li a:hover,
+.dashboard .top .dash-new-users li a:hover {
+  color: var(--secondary-dark-color);
+}
+
+.dashboard .top .account-profile-options li a i,
+.dashboard .top .dash-new-users li a i {
+  margin-right: 10px;
+}
+
+.chart-wrapper {
+  width: 500px;
+}
+
+.single-user,
+.single-student,
+.book-modal {
+  margin-top: 70px;
+}
+
+.single-user .single-user-data,
+.single-student .single-user-data {
+  justify-content: flex-start;
+}
+
+.single-user .single-user-data .user-data,
+.single-student .single-user-data .user-data {
+  flex-basis: auto;
+  margin-right: 150px;
+}
+
+.single-user .single-user-data .user-data div,
+.single-student .single-user-data .user-data div {
+  margin-bottom: 20px;
+}
+
+.single-user .single-user-data .user-data p,
+.single-student .single-user-data .user-data p {
+  font-size: 14px;
+}
+
+.single-user .single-user-data .user-data h5,
+.single-student .single-user-data .user-data h5 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.single-user-email h5 {
+  color: var(--primary-link-color);
+}
+
+.single-user-photo img {
+  width: 200px;
+  border: 3px solid var(--border-color);
+}
+
+.single-user-modal-open,
+.single-student-modal-open,
+.book-modal-open {
+  cursor: pointer;
+}
+
+.single-user-modal-open:hover,
+.single-student-modal-open:hover,
+.book-modal-open:hover {
+  color: var(--success-btn-color);
+}
+
+.single-user .overview,
+.single-student .overview,
+.book-modal .overview {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+  padding: 0 40px 10px 0;
+}
+
+.single-user .overview .title,
+.single-student .overview .title,
+.book-modal .overview .title {
+  margin-right: auto;
+}
+
+.single-user .overview ul,
+.single-student .overview ul,
+.book-modal .overview ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-user .overview ul li,
+.single-student .overview ul li,
+.book-modal .overview ul li {
+  margin: 0 10px;
+}
+
+.single-user .overview ul li a,
+.single-student .overview ul li a,
+.book-modal .overview ul li a {
+  color: var(--primary--color);
+  font-size: 14px;
+}
+
+.single-user .overview ul li a:hover,
+.single-student .overview ul li a:hover,
+.book-modal .overview ul li a:hover {
+  color: var(--black-light-color);
+}
+
+.single-user .overview .title p a,
+.single-student .overview .title p a,
+.book-modal .overview .title p a {
+  color: var(--primary-link-color);
+}
+
+.single-user .overview .title p a:hover,
+.single-student .overview .title p a:hover,
+.book-modal .overview .title p a:hover {
+  color: var(--success-btn-color);
+}
+
+.all-single-user-profile-options i {
+  font-size: 18px;
+}
+
+.book-modal-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px 0 0;
+}
+
+.book-modal-main {
+  flex-basis: 80%;
+  border-right: 2px solid var(--border-color);
+}
+
+.book-modal-sidebar {
+  flex-basis: 20%;
+  padding: 20px;
+}
+
+.book-modal-main-tabs {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.book-modal-main-tabs ul {
+  display: flex;
+  align-items: center;
+}
+
+.book-modal-main-tabs ul li {
+  margin: 0 30px 0 0;
+}
+
+.book-modal-main-tabs ul li a {
+  color: var(--primary-dark-color);
+}
+
+.book-modal-main-tabs ul li a:hover {
+  color: var(--black-light-color);
+}
+
+.book-modal-main-tabs ul li a.is-active {
+  color: var(--primary-link-color);
+  border-bottom: 1px solid var(--primary-link-color);
+  padding-bottom: 15px;
+}
+
+.book-modal-main__content {
+  display: none;
+  padding: 20px;
+}
+
+.book-modal-main__content.is-active {
+  display: block;
+}
+
+.book-modal-main__toggle.is-active {
+  color: var(--primary-link-color);
+}
+
+.book-modal-main__content .book-main-content-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-main-content-details-wrapper .book-main-details {
+  flex-basis: 60%;
+}
+
+.book-main-details div {
+  margin-bottom: 30px;
+}
+
+.book-main-details div p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.book-main-details div h5 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.book-main-content-details-wrapper .book-storyline {
+  flex-basis: 40%;
+}
+
+.book-main-content-details-wrapper .book-storyline a {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--primary-link-color);
+}
+
+.book-storyline h6 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.book-storyline p {
+  line-height: 25px;
+}
+
+.multimedia div {
+  height: 400px;
+  border: 4px dotted var(--border-color);
+  text-align: center;
+  padding: 20px;
+}
+
+.multimedia label span {
+  color: var(--primary-link-color);
+}
+
+.multimedia input {
+  border: none;
+  margin: 20px auto;
+  width: 200px;
+}
+
+.book-modal-sidebar .sidebar-top {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 20px;
+}
+
+.sidebar-top .sidebar-top-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.sidebar-top-info .sidebar-important-info {
+  color: var(--primary-link-color);
+}
+
+.book-modal-sidebar .sidebar-bottom {
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.sidebar-bottom-info {
+  margin-bottom: 30px;
+}
+
+.sidebar-bottom-info span.sidebar-important-info {
+  color: var(--primary-link-color);
+}
+
+.sidebar-bottom p {
+  margin-bottom: 4px;
+}
+
+.sidebar-bottom a {
+  color: var(--primary-link-color);
+  display: inline-block;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.sidebar-bottom a:hover {
+  color: var(--success-btn-color);
+}
+
+.sidebar-show-all a {
+  font-size: 16px;
+}
+
+.rental-info-nav {
+  margin-bottom: 30px;
+}
+
+.rental-info-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rental-info-nav ul li a {
+  color: var(--primary-dark-color);
+}
+
+.rental-info-nav ul li a:hover {
+  color: var(--black-light-color);
+}
+
+.single-book-options-content {
+  margin-bottom: 50px;
+}
+
+.single-book-options-content h3 {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.single-book-options-content h3.single-book-alert {
+  color: var(--danger-btn-color);
+}
+
+.single-book-options-content .new-user-data .user-data label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.single-book-options-content .new-user-data .user-data select {
+  width: 40%;
+  padding: 5px;
+  margin-bottom: 40px;
+  border: 2px solid var(--border-color);
+}
+
+.single-book-options-content .new-user-data .user-data input {
+  width: 20%;
+  padding: 5px;
+  border: 2px solid var(--border-color);
+}
+
+.single-book-options-content .rent-a-book-main-content {
+  width: 100%;
+  padding: 30px;
+  background-color: var(--secondary-light-color);
+}
+
+.single-book-options-content input[type="date"] {
+  margin-bottom: 20px;
+}
+
+.rent-a-book-main-content h5 {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.rent-a-book-main-content .rent-a-book-info {
+  width: 300px;
+}
+
+.rent-a-book-main-content .rent-a-book-info .rent-a-book-more-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rent-a-book-more-details p {
+  margin: 0 30px 15px 0;
+  font-size: 14px;
+}
+
+.rent-a-book-more-details p.bold-info {
+  font-weight: 500;
+}
+
+.reset-password .new-user-data {
+  display: block;
+}
+
+.reset-password .new-user-data input {
+  width: 30%;
+}
+
+@media screen and (max-width: 1280px) {
+  .show-all-activities-btn {
+    width: 90%;
+  }
+
+  .book-modal-main {
+    flex-basis: 70%;
+  }
+
+  .book-modal-sidebar {
+    flex-basis: 30%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    width: 250px;
+  }
+
+  nav.close {
+    width: 73px;
+  }
+
+  nav h1 .link-name {
+    opacity: 1;
+  }
+
+  nav.close h1 .link-name {
+    opacity: 0;
+  }
+
+  nav.close .link-name {
+    opacity: 0;
+  }
+
+  nav li a .link-name {
+    opacity: 1;
+  }
+
+  nav.close li a .link-name {
+    opacity: 0;
+  }
+
+  nav ~ .dashboard {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  nav.close ~ .dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+
+  nav ~ .dashboard .top {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  nav.close ~ .dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+
+  .dash-content,
+  .librarians-content,
+  .students-content,
+  .books-content,
+  .book-rental-content,
+  .settings-content,
+  .authors-content {
+    width: 100%;
+  }
+
+  .dash-main-content {
+    display: block;
+  }
+
+  .reservation-statistics {
+    width: 90%;
+  }
+
+  .show-all-activities-btn {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .show-all-activities-btn .showAll {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table tr td {
+    padding: 10px 5px;
+  }
+
+  table tr td .checkbox {
+    margin-right: 0;
+  }
+
+  table tr td i {
+    padding-left: 5px;
+  }
+
+  table img {
+    display: none;
+  }
+
+  .books-table td {
+    padding: 10px;
+  }
+
+  .members {
+    width: 95%;
+  }
+
+  .book-rental-main-content {
+    align-items: flex-start;
+  }
+
+  .book-rental-table .members {
+    margin: 0 0 30px 0;
+    display: block;
+  }
+
+  .book-rental-table .members .input {
+    width: 220px;
+    border: 1px solid var(--black-light-color);
+    margin-bottom: 15px;
+  }
+
+  .dashboard-reservation {
+    justify-content: space-between;
+  }
+
+  .new-content,
+  .modal {
+    width: 100%;
+  }
+
+  .new-content .overview {
+    width: 100%;
+  }
+
+  .new-content .new-user-data,
+  .single-book-options-content .new-user-data {
+    display: block;
+  }
+
+  .new-author .autor-data .user-data input,
+  .new-author .autor-data .user-data textarea {
+    width: 100%;
+  }
+
+  .user-data {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .user-add-photo {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .new-content input.add-user-photo {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+  }
+
+  .chart-wrapper {
+    width: 90%;
+  }
+
+  .single-student-info-content {
+    display: block;
+  }
+
+  .single-student-info {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .book-modal-content {
+    display: block;
+    padding: 0;
+  }
+
+  .book-modal-main {
+    flex-basis: auto;
+    border-right: none;
+  }
+
+  .book-modal-main__content {
+    padding: 20px 5px;
+  }
+
+  .book-modal-sidebar {
+    flex-basis: auto;
+    margin-bottom: 60px;
+  }
+
+  .book-modal-sidebar .sidebar-top .sidebar-top-info {
+    justify-content: space-around;
+  }
+
+  .single-book-options-content .new-user-data .user-data select {
+    width: 80%;
+  }
+
+  .single-book-options-content .new-user-data .user-data input {
+    width: 50%;
+  }
+
+  .reset-password .new-user-data input {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dash-activities {
+    width: 100%;
+  }
+
+  .table-container {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  table tr {
+    margin-bottom: 15px;
+  }
+
+  table tr td {
+    padding: 15px 5px;
+  }
+
+  table tbody tr td {
+    border: 1px solid var(--border-color);
+    text-align: right;
+    position: relative;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    padding-left: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    width: 50%;
+  }
+
+  .book-rental-table {
+    width: 100%;
+  }
+
+  .authors-content table td {
+    height: 100px;
+  }
+
+  .authors-content table td::before {
+    display: none;
+  }
+
+  .book-rental-content {
+    margin: 70px auto;
+  }
+
+  .book-rental-main-content {
+    display: block;
+  }
+
+  .book-rental-main-content .book-rental-actions .book-rental-actions-links,
+  .book-rental-main-content .book-rental-actions .book-rental-actions-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .book-rental-actions {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .book-rental-actions-links li,
+  .book-rental-actions-info li {
+    padding: 0 20px;
+  }
+
+  .members .new-member {
+    padding: 20px 0;
+    margin-bottom: 10px;
+  }
+
+  .members {
+    display: block;
+    margin: 20px 0;
+    width: 300px;
+  }
+
+  .members .new-member input {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .search-members input {
+    font-size: 14px;
+  }
+
+  .search-members button {
+    font-size: 14px;
+  }
+
+  .single-activity {
+    font-size: 14px;
+  }
+
+  .dashboard-reservation {
+    font-size: 14px;
+  }
+
+  .settings-tabs ul {
+    flex-direction: column;
+  }
+
+  .settings-tabs ul li {
+    margin-bottom: 15px;
+  }
+
+  .settings__toggle.is-active {
+    color: var(--primary-link-color);
+    border: none;
+  }
+
+  .settings-content td::before {
+    display: none;
+  }
+
+  .new-content {
+    width: 100%;
+  }
+
+  .new-content .user-data,
+  .new-content .user-add-photo {
+    width: 100%;
+  }
+
+  .new-content input,
+  .new-content select,
+  .new-content textarea {
+    width: 100%;
+  }
+
+  .new-author .autor-data .user-data input {
+    width: 100;
+  }
+
+  .new-author .autor-data .user-data textarea {
+    width: 100%;
+    height: 200px;
+  }
+
+  .single-user .overview,
+  .single-student .overview,
+  .book-modal .overview {
+    padding: 0 20px 10px 0;
+  }
+
+  .single-student-info {
+    width: 80%;
+    margin-bottom: 100px;
+  }
+
+  .single-student .nav-links {
+    width: 80%;
+  }
+
+  .book-modal-main-tabs ul li {
+    margin: 0 15px 0 0;
+  }
+
+  .book-modal-main-tabs ul li a.is-active {
+    border-bottom: none;
+  }
+
+  .single-book-options-content h3 {
+    margin-bottom: 0;
+  }
+
+  .single-book-options-content .new-user-data .user-data {
+    margin: 20px 0;
+  }
+
+  .rent-a-book-main-content {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .book-modal-content {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    width: 73px;
+    display: block;
+  }
+
+  nav.close {
+    width: 0;
+    display: none;
+  }
+
+  .sidebar-toggle {
+    padding-left: 12px;
+  }
+
+  nav h1 {
+    opacity: 0;
+  }
+
+  nav li a .link-name {
+    opacity: 0;
+  }
+
+  nav.close li a .link-name {
+    opacity: 0;
+  }
+
+  nav ~ .dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+
+  nav.close ~ .dashboard {
+    left: 0;
+    width: 100%;
+  }
+
+  nav ~ .dashboard .top {
+    left: 0;
+    width: 100%;
+  }
+
+  nav.close ~ .dashboard .top {
+    left: 0;
+    width: 100%;
+  }
+
+  .chart-wrapper {
+    width: 90%;
+  }
+
+  .new-content .modal .overview {
+    width: 90%;
+  }
+
+  .single-book-options-content .new-user-data .user-data select,
+  .single-book-options-content .new-user-data .user-data input,
+  .new-content .user-data input,
+  .new-content .user-data select,
+  .new-content .user-add-photo input {
+    width: 100%;
+  }
+
+  .new-author .autor-data .user-data input,
+  .new-author .autor-data .user-data textarea {
+    width: 100%;
+  }
+
+  .knjiga-data textarea {
+    width: 100%;
+  }
+
+  .single-user .overview ul li,
+  .single-student .overview ul li,
+  .book-modal .overview ul li {
+    margin: 0 5px;
+  }
+
+  .single-user .overview,
+  .single-student .overview,
+  .book-modal .overview {
+    padding: 0 0 10px 0;
+  }
+
+  .single-student-info {
+    width: 100%;
+  }
+
+  .single-user-profile-options {
+    margin: 10px 0 0 0;
+  }
+
+  .book-modal .overview {
+    flex-wrap: wrap;
+  }
+
+  .book-modal-main-tabs {
+    padding-bottom: 0;
+  }
+
+  .book-modal-main-tabs ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+
+  .book-modal-main-tabs ul li {
+    margin-bottom: 15px;
+  }
+
+  .book-modal-main__content .book-main-content-details-wrapper {
+    display: block;
+  }
+
+  .book-main-details {
+    flex-basis: auto;
+  }
+
+  .book-storyline {
+    flex-basis: auto;
+  }
+
+  .sidebar-show-all {
+    text-align: center;
+  }
+
+  .rental-info-nav ul {
+    flex-direction: column;
+  }
+
+  .rental-info-nav ul li {
+    margin-bottom: 20px;
+  }
+
+  .new-content .overview {
+    width: 100%;
+  }
+
+  .new-content .new-user-data .user-data {
+    width: 100%;
+  }
+}

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single student info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <nav class="close">
+      <div class="logo-name">
+        <a href="../index.html"
+          ><h1>B<span class="link-name">iblioteka</span></h1></a
+        >
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html">
+              <i class="fa-solid fa-gauge"></i>
+              <span class="link-name">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../librarians.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Bibliotekari</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../students.html">
+              <i class="fa-solid fa-users"></i>
+              <span class="link-name">Ucenici</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../books.html">
+              <i class="fa-solid fa-copy"></i>
+              <span class="link-name">Knjige</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../authors.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Autori</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../book-rental.html">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              <span class="link-name">Izdavanje knjiga</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="settings">
+          <li>
+            <a href="../settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span class="link-name">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <header>
+        <div class="top">
+          <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+          <div class="user-settings">
+            <div class="create-users">
+              <a href="#" class="user-create-btn">Kreiraj</a>
+            </div>
+
+            <div class="dash-new-users hidden">
+              <ul>
+                <li>
+                  <a href="../new-content/new-librarian.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Bibliotekar</a
+                  >
+                </li>
+                <li>
+                  <a href="../new-content/new-student.html"
+                    ><span><i class="fa-solid fa-users"></i></span>Ucenik</a
+                  >
+                </li>
+                <li>
+                  <a href="../new-content/new-book.html"
+                    ><span><i class="fa-solid fa-book"></i></span>Knjiga</a
+                  >
+                </li>
+                <li>
+                  <a href="../new-content/new-author.html"
+                    ><span><i class="fa-regular fa-address-book"></i></span
+                    >Autor</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .dash-new-users -->
+
+            <div class="account-profile-options hidden">
+              <ul>
+                <li>
+                  <a href="single-admin-info.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-right-from-bracket"></i></span
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .account-profile-options-hidden-->
+
+            <div class="user-account">
+              <a href="#" class="user-profile-options"
+                ><img src="../images/accounts.jpg" alt="profile-photo"
+              /></a>
+            </div>
+            <!-- end .user-account -->
+          </div>
+        </div>
+      </header>
+
+      <div class="single-student">
+        <div class="overview">
+          <div class="title">
+            <h2>Pero Perovic</h2>
+            <p><a href="../students.html"> Svi ucenici</a> / ID - 354</p>
+          </div>
+
+          <div class="single-user-profile-options">
+            <ul>
+              <li>
+                <a href="../store-content-info/reset-password.html"
+                  ><i class="fa-solid fa-arrows-rotate"></i> Resetuj sifru</a
+                >
+              </li>
+              <li>
+                <a href="../store-content-info/edit-profile.html"
+                  ><i class="fa-solid fa-pen-to-square"></i> Izmijeni podatke</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../store-content-info/single-student-info.html"
+                  class="all-single-user-profile-options"
+                  ><i class="fa-solid fa-ellipsis-vertical"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end .overview -->
+
+        <div class="single-student-tabs">
+          <ul>
+            <li>
+              <a href="#" class="single-student__toggle is-active"
+                >Osnovni detalji</a
+              >
+            </li>
+            <li>
+              <a href="#" class="single-student__toggle"
+                >Evidencija iznajmljivanja</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="single-student-main-content">
+          <div class="single-student__content is-active">
+            <div class="single-user-data new-user-data">
+              <div class="user-data">
+                <div class="single-user-name">
+                  <p>Ime i prezime</p>
+                  <h5>Pero Perovic</h5>
+                </div>
+                <div class="single-user-type">
+                  <p>Tip korisnika</p>
+                  <h5>Ucenik</h5>
+                </div>
+                <div class="single-user-jmbg">
+                  <p>JBMG</p>
+                  <h5>0812996242153</h5>
+                </div>
+                <div class="single-user-email">
+                  <p>Email</p>
+                  <h5>peroperovic.me@gmail.com</h5>
+                </div>
+                <div class="single-user-username">
+                  <p>Korisnicko ime</p>
+                  <h5>pero.perovic</h5>
+                </div>
+                <div class="single-user-logs-info">
+                  <p>Broj logovanja</p>
+                  <h5>18</h5>
+                </div>
+                <div class="single-user-last-login">
+                  <p>Poslednji put logovan</p>
+                  <h5>Juce 09:42 AM</h5>
+                </div>
+              </div>
+              <!-- end .user-data -->
+
+              <div class="single-user-photo user-add-photo">
+                <img src="../images/vladimir.jpg" alt="ucenik-vladimir" />
+              </div>
+              <!-- end .single-user-photo -->
+            </div>
+            <!-- end .user-data -->
+          </div>
+
+          <div class="single-student__content">
+            <div class="single-student-info-content">
+              <div class="single-student-nav izdavanje-actions">
+                <ul>
+                  <li>
+                    <a href="#" class="is-active">
+                      <i class="fa-solid fa-book"></i>
+                      <span class="link-name">Izdate knjige</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-copy"></i>
+                      <span class="link-name">Vracene knjige</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      <span class="link-name">Knjige u prekoracenju</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa-regular fa-calendar-check"></i>
+                      <span class="link-name">Aktivne rezervacije</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      <span class="link-name">Arhivirane rezervacije</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- end .single-student-nav -->
+
+              <div class="single-student-info">
+                <div class="izdavanje-knjiga-tabs-container">
+                  <div
+                    class="izdavanje-knjiga-table-div single-student-info__content is-active"
+                  >
+                    <table class="books-table">
+                      <thead>
+                        <tr>
+                          <td>
+                            <span class="table-name">Naziv knjige</span
+                            ><i class="fa-solid fa-arrow-down"></i>
+                          </td>
+                          <td>Izdato uceniku</td>
+                          <td>Datum izdavanja</td>
+                          <td>Trenutno zadrzavanje</td>
+                          <td>Knjigu izdao</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td data-label="Naziv knjige">
+                            <span
+                              ><img
+                                src="../images/book-cover.jpg"
+                                alt="book-cover"
+                                class="book-cover-img"
+                            /></span>
+                            <span class="table-name">Geografija Crne Gore</span>
+                          </td>
+                          <td data-label="Izdato uceniku">Pero Perovic</td>
+                          <td data-label="Datum izdavanja">21.02.2021</td>
+                          <td data-label="Trenutno zadrzavanje">
+                            2 nedelje i 3 dana
+                          </td>
+                          <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                          <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="Naziv knjige">
+                            <img
+                              src="../images/book-cover.jpg"
+                              alt="book-cover"
+                              class="book-cover-img"
+                            />
+                            <span class="table-name">Muzicka kultura</span>
+                          </td>
+                          <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                          <td data-label="Datum izdavanja">15.05.2021</td>
+                          <td data-label="Trenutno zadrzavanje">5 dana</td>
+                          <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                          <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="Naziv knjige">
+                            <span
+                              ><img
+                                src="../images/book-cover.jpg"
+                                alt="book-cover"
+                                class="book-cover-img"
+                            /></span>
+                            <span class="table-name">Tom Sojer</span>
+                          </td>
+                          <td data-label="Izdato uceniku">Milos Milosevic</td>
+                          <td data-label="Datum izdavanja">27.06.2021</td>
+                          <td data-label="Trenutno zadrzavanje">
+                            1 nedelja i 4 dana
+                          </td>
+                          <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                          <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="Naziv knjige">
+                            <span
+                              ><img
+                                src="../images/book-cover.jpg"
+                                alt="book-cover"
+                                class="book-cover-img"
+                            /></span>
+                            <span class="table-name">Robinson Kruso</span>
+                          </td>
+                          <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                          <td data-label="Datum izdavanja">09.07.2021</td>
+                          <td
+                            data-label="Trenutno zadrzavanje"
+                            class="table-danger"
+                          >
+                            1 mjesec i 6 dana
+                          </td>
+                          <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                          <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="Naziv knjige">
+                            <span
+                              ><img
+                                src="../images/book-cover.jpg"
+                                alt="book-cover"
+                                class="book-cover-img"
+                            /></span>
+                            <span class="table-name">Geografija Crne Gore</span>
+                          </td>
+                          <td data-label="Izdato uceniku">Pero Perovic</td>
+                          <td data-label="Datum izdavanja">22.08.2021</td>
+                          <td
+                            data-label="Trenutno zadrzavanje"
+                            class="table-danger"
+                          >
+                            3 mjeseca i 2 nedelje
+                          </td>
+                          <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                          <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="Naziv knjige">
+                            <span
+                              ><img
+                                src="../images/book-cover.jpg"
+                                alt="book-cover"
+                                class="book-cover-img"
+                            /></span>
+                            <span class="table-name">Muzicka kultura</span>
+                          </td>
+                          <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                          <td data-label="Datum izdavanja">30.10.2021</td>
+                          <td data-label="Trenutno zadrzavanje">9 dana</td>
+                          <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                          <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="Naziv knjige">
+                            <span
+                              ><img
+                                src="../images/book-cover.jpg"
+                                alt="book-cover"
+                                class="book-cover-img"
+                            /></span>
+                            <span class="table-name">Tom Sojer</span>
+                          </td>
+                          <td data-label="Izdato uceniku">Milos Milosevic</td>
+                          <td data-label="Datum izdavanja">27.11.2021</td>
+                          <td data-label="Trenutno zadrzavanje">
+                            2 nedelje i 4 dana
+                          </td>
+                          <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                          <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="Naziv knjige">
+                            <span
+                              ><img
+                                src="../images/book-cover.jpg"
+                                alt="book-cover"
+                                class="book-cover-img"
+                            /></span>
+                            <span class="table-name">Robinson Kruso</span>
+                          </td>
+                          <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                          <td data-label="Datum izdavanja">11.12.2021</td>
+                          <td data-label="Trenutno zadrzavanje">
+                            3 nedelje i 6 dana
+                          </td>
+                          <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                          <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- end .izdavanje-knjiga-tabs -->
+              </div>
+              <!-- end .single-student-info -->
+            </div>
+            <!-- .single-student-info-content -->
+          </div>
+          <!-- end .single-student__content -->
+        </div>
+        <!-- end .single-student-main-content -->
+      </div>
+      <!-- end .single-user-data modal -->
+    </section>
+    <!-- end .dashboard-->
+
+    <script src="../app/script.js"></script>
+    <script src="../app/single-student-info.js"></script>
+  </body>
+</html>

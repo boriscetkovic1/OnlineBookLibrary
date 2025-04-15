@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <nav class="close">
+      <div class="logo-name">
+        <a href="index.html"
+          ><h1>B<span class="link-name">iblioteka</span></h1></a
+        >
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-gauge"></i>
+              <span class="link-name">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="librarians.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Bibliotekari</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="students.html">
+              <i class="fa-solid fa-users"></i>
+              <span class="link-name">Ucenici</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="books.html">
+              <i class="fa-solid fa-copy"></i>
+              <span class="link-name">Knjige</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="authors.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Autori</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="book-rental.html">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              <span class="link-name">Izdavanje knjiga</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="settings">
+          <li>
+            <a href="settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span class="link-name">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <header>
+        <div class="top">
+          <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+          <div class="user-settings">
+            <div class="create-users">
+              <a href="#" class="user-create-btn">Kreiraj</a>
+            </div>
+
+            <div class="dash-new-users hidden">
+              <ul>
+                <li>
+                  <a href="new-content/new-librarian.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Bibliotekar</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-student.html"
+                    ><span><i class="fa-solid fa-users"></i></span>Ucenik</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-book.html"
+                    ><span><i class="fa-solid fa-book"></i></span>Knjiga</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-author.html"
+                    ><span><i class="fa-regular fa-address-book"></i></span
+                    >Autor</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .dash-new-users -->
+
+            <div class="account-profile-options hidden">
+              <ul>
+                <li>
+                  <a href="store-content-info/single-admin-info.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-right-from-bracket"></i></span
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .account-profile-options-hidden-->
+
+            <div class="user-account">
+              <a href="#" class="user-profile-options"
+                ><img src="images/accounts.jpg" alt="profile-photo"
+              /></a>
+            </div>
+            <!-- end .user-account -->
+          </div>
+        </div>
+      </header>
+
+      <div class="settings-content tabs__content">
+        <div class="overview">
+          <div class="title">
+            <h1>Settings</h1>
+          </div>
+        </div>
+        <!-- end .overview -->
+
+        <div class="settings-tabs">
+          <ul>
+            <li>
+              <a href="#" class="settings__toggle is-active">Polisa</a>
+            </li>
+
+            <li>
+              <a href="#" class="settings__toggle">Kategorije</a>
+            </li>
+
+            <li>
+              <a href="#" class="settings__toggle">Zanrovi</a>
+            </li>
+
+            <li>
+              <a href="#" class="settings__toggle">Izdavac</a>
+            </li>
+
+            <li>
+              <a href="#" class="settings__toggle">Povez</a>
+            </li>
+
+            <li>
+              <a href="#" class="settings__toggle">Format</a>
+            </li>
+
+            <li>
+              <a href="#" class="settings__toggle">Pismo</a>
+            </li>
+          </ul>
+        </div>
+        <!-- end .settings-tabs-->
+
+        <div class="settings-main-content">
+          <div class="settings__content is-active">
+            <div class="time-limit reservation-deadline">
+              <div class="deadline-paragraph">
+                <h4>Rok za rezervaciju</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+                  Dolore voluptatum temporibus quae expedita recusandae.
+                </p>
+              </div>
+
+              <div class="deadline-days">
+                <input type="text" name="deadline-days" /><span>dana</span>
+              </div>
+            </div>
+            <!-- end .time-limit -->
+
+            <div class="time-limit return-deadline">
+              <div class="deadline-paragraph">
+                <h4>Rok za rezervaciju</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+                  Dolore voluptatum temporibus quae expedita recusandae.
+                </p>
+              </div>
+
+              <div class="deadline-days">
+                <input type="text" name="deadline-days" /><span>dana</span>
+              </div>
+            </div>
+            <!-- end .time-limit -->
+
+            <div class="time-limit term-of-conflict">
+              <div class="deadline-paragraph">
+                <h4>Rok za rezervaciju</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+                  Dolore voluptatum temporibus quae expedita recusandae.
+                </p>
+              </div>
+
+              <div class="deadline-days">
+                <input type="text" name="deadline-days" /><span>dana</span>
+              </div>
+            </div>
+            <!-- end .time-limit -->
+          </div>
+          <!-- end .settings-content -->
+
+          <div class="settings__content">
+            <div class="settings-style settings-categories">
+              <div class="new-category new-settings-style">
+                <a href="#">Nova kategorija</a>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp; <span class="table-name">Naziv kategorije</span
+                      ><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Opis</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td data-label="Naziv kategorije">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-utensils"></i></span>
+                      <span class="table-name">Hrana i pice</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv kategorije">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span
+                        ><i class="fa-solid fa-child-reaching"></i
+                      ></span>
+                      <span class="table-name">Djecije knjige</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv kategorije">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-clock"></i></span>
+                      <span class="table-name">Istorija</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv kategorije">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Skolske knjige</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv kategorije">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span
+                        ><i class="fa-solid fa-square-root-variable"></i
+                      ></span>
+                      <span class="table-name"
+                        >Nauka, priroda i matematika</span
+                      >
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv kategorije">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-infinity"></i></span>
+                      <span class="table-name">Pravo</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv kategorije">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-utensils"></i></span>
+                      <span class="table-name">Hrana i pice</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end .table-container -->
+          </div>
+          <!-- end .settings-content -->
+
+          <div class="settings__content">
+            <div class="settings-style settings-categories">
+              <div class="new-category new-settings-style">
+                <a href="#">Novi zanr</a>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp; <span class="table-name">Naziv zanra</span
+                      ><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Opis</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td data-label="Naziv zanra">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Akcioni</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv zanra">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span
+                        ><i class="fa-solid fa-child-reaching"></i
+                      ></span>
+                      <span class="table-name">Djecije knjige</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv zanra">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-clock"></i></span>
+                      <span class="table-name">Istorijski</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv zanra">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Edukativni</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv zanra">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span
+                        ><i class="fa-solid fa-user-secret"></i
+                      ></span>
+                      <span class="table-name">Biografski</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv zanra">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-infinity"></i></span>
+                      <span class="table-name">Putopisi</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv zanra">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span
+                        ><i class="fa-sharp fa-solid fa-face-smile"></i
+                      ></span>
+                      <span class="table-name">Komedija</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end .table-container -->
+          </div>
+          <!-- end .settings-content -->
+
+          <div class="settings__content">
+            <div class="settings-style settings-categories">
+              <div class="new-category new-settings-style">
+                <a href="#">Novi izdavac</a>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp; <span class="table-name">Naziv izdavaca</span
+                      ><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Opis</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td data-label="Naziv izdavaca">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Biblioteka Sveti Sava</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv izdavaca">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Biblioteka Sveti Sava</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv izdavaca">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Biblioteka Sveti Sava</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv izdavaca">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Biblioteka Sveti Sava</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv izdavaca">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Biblioteka Sveti Sava</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv izdavaca">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Biblioteka Sveti Sava</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv izdavaca">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Biblioteka Sveti Sava</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end .table-container -->
+          </div>
+          <!-- end .settings-content -->
+
+          <div class="settings__content">
+            <div class="settings-style settings-categories">
+              <div class="new-category new-settings-style">
+                <a href="#">Novi povez</a>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp; <span class="table-name">Naziv poveza</span
+                      ><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Opis</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td data-label="Naziv poveza">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Tvrdi povez</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv poveza">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Meki povez</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv poveza">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Meko koricenje</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv poveza">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Tvrdo koricenje</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end .table-container -->
+          </div>
+          <!-- end .settings-content -->
+
+          <div class="settings__content">
+            <div class="settings-style settings-categories">
+              <div class="new-category new-settings-style">
+                <a href="#">Novi format</a>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp; <span class="table-name">Naziv formata</span
+                      ><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Opis</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td data-label="Naziv formata">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">A1</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv formata">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">A2</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv formata">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">A4</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv formata">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">B5</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv formata">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">C2</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end .table-container -->
+          </div>
+          <!-- end .settings-content -->
+
+          <div class="settings__content">
+            <div class="settings-style settings-categories">
+              <div class="new-category new-settings-style">
+                <a href="#">Novo pismo</a>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp; <span class="table-name">Naziv pisma</span
+                      ><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Opis</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td data-label="Naziv pisma">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Cirilica</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv pisma">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Latinica</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv pisma">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Kinesko</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv pisma">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Slikovno</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="Naziv pisma">
+                      <input
+                        type="checkbox"
+                        name="ime"
+                        class="checkbox"
+                      />&nbsp;<span><i class="fa-solid fa-book"></i></span>
+                      <span class="table-name">Arapsko pismo</span>
+                    </td>
+                    <td data-label="Opis">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end .table-container -->
+          </div>
+          <!-- end .settings-content -->
+        </div>
+        <!-- end .settings-main-content -->
+      </div>
+      <!-- end .settings-content -->
+    </section>
+    <!-- end .dashboard-->
+
+    <script src="app/script.js"></script>
+    <script src="app/settings.js"></script>
+  </body>
+</html>

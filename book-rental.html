@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book rental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <nav class="close">
+      <div class="logo-name">
+        <a href="index.html"
+          ><h1>B<span class="link-name">iblioteka</span></h1></a
+        >
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-gauge"></i>
+              <span class="link-name">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="librarians.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Bibliotekari</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="students.html">
+              <i class="fa-solid fa-users"></i>
+              <span class="link-name">Ucenici</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="books.html">
+              <i class="fa-solid fa-copy"></i>
+              <span class="link-name">Knjige</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="authors.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Autori</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="book-rental.html">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              <span class="link-name">Izdavanje knjiga</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="settings">
+          <li>
+            <a href="settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span class="link-name">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <header>
+        <div class="top">
+          <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+          <div class="user-settings">
+            <div class="create-users">
+              <a href="#" class="user-create-btn">Kreiraj</a>
+            </div>
+
+            <div class="dash-new-users hidden">
+              <ul>
+                <li>
+                  <a href="new-content/new-librarian.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Bibliotekar</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-student.html"
+                    ><span><i class="fa-solid fa-users"></i></span>Ucenik</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-book.html"
+                    ><span><i class="fa-solid fa-book"></i></span>Knjiga</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-author.html"
+                    ><span><i class="fa-regular fa-address-book"></i></span
+                    >Autor</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .dash-new-users -->
+
+            <div class="account-profile-options hidden">
+              <ul>
+                <li>
+                  <a href="store-content-info/single-admin-info.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-right-from-bracket"></i></span
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .account-profile-options-hidden-->
+
+            <div class="user-account">
+              <a href="#" class="user-profile-options"
+                ><img src="images/accounts.jpg" alt="profile-photo"
+              /></a>
+            </div>
+            <!-- end .user-account -->
+          </div>
+        </div>
+      </header>
+
+      <div class="book-rental-content">
+        <div class="overview">
+          <div class="title">
+            <h1>Izdavanje knjiga</h1>
+          </div>
+        </div>
+        <!-- end .overview -->
+
+        <div class="book-rental-main-content">
+          <div class="book-rental-actions">
+            <ul class="nav-links book-rental-actions-links">
+              <li>
+                <a href="#" class="knjige__toggle is-active">
+                  <i class="fa-solid fa-book"></i>
+                  <span class="link-name">Izdate knjige</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="knjige__toggle">
+                  <i class="fa-solid fa-copy"></i>
+                  <span class="link-name">Vracene knjige</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="knjige__toggle">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                  <span class="link-name">Knjige u prekoracenju</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav-links book-rental-actions-info">
+              <li>
+                <a href="#" class="knjige__toggle">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span class="link-name">Aktivne rezervacije</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="knjige__toggle">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <span class="link-name">Arhivirane rezervacije</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end .book-rental-actions -->
+
+          <div class="book-rental-table">
+            <div class="members">
+              <div class="new-member">
+                <input
+                  type="text"
+                  placeholder="Pretrazi knjige"
+                  id="book-rental-search"
+                  onkeyup="searchFunction()"
+                />
+                <a href="#">Pretrazi</a>
+              </div>
+            </div>
+            <!-- end .members-->
+
+            <div class="book-rental-tabs-container">
+              <div class="book-rental-table-div knjige__content is-active">
+                <table class="books-table book-rental-search-table">
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp; <span class="table-name">Naziv knjige</span
+                        ><i class="fa-solid fa-arrow-down"></i>
+                      </td>
+                      <td>Izdato uceniku</td>
+                      <td>Datum izdavanja</td>
+                      <td>Trenutno zadrzavanje</td>
+                      <td>Knjigu izdao</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Geografija Crne Gore</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Pero Perovic</td>
+                      <td data-label="Datum izdavanja">21.02.2021</td>
+                      <td data-label="Trenutno zadrzavanje">
+                        2 nedelje i 3 dana
+                      </td>
+                      <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Muzicka kultura</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                      <td data-label="Datum izdavanja">15.05.2021</td>
+                      <td data-label="Trenutno zadrzavanje">5 dana</td>
+                      <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Tom Sojer</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Milos Milosevic</td>
+                      <td data-label="Datum izdavanja">27.06.2021</td>
+                      <td data-label="Trenutno zadrzavanje">
+                        1 nedelja i 4 dana
+                      </td>
+                      <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Robinson Kruso</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                      <td data-label="Datum izdavanja">09.07.2021</td>
+                      <td
+                        data-label="Trenutno zadrzavanje"
+                        class="table-danger"
+                      >
+                        1 mjesec i 6 dana
+                      </td>
+                      <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Geografija Crne Gore</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Pero Perovic</td>
+                      <td data-label="Datum izdavanja">22.08.2021</td>
+                      <td
+                        data-label="Trenutno zadrzavanje"
+                        class="table-danger"
+                      >
+                        3 mjeseca i 2 nedelje
+                      </td>
+                      <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Muzicka kultura</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                      <td data-label="Datum izdavanja">30.10.2021</td>
+                      <td data-label="Trenutno zadrzavanje">9 dana</td>
+                      <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Tom Sojer</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Milos Milosevic</td>
+                      <td data-label="Datum izdavanja">27.11.2021</td>
+                      <td data-label="Trenutno zadrzavanje">
+                        2 nedelje i 4 dana
+                      </td>
+                      <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Robinson Kruso</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                      <td data-label="Datum izdavanja">11.12.2021</td>
+                      <td data-label="Trenutno zadrzavanje">
+                        3 nedelje i 6 dana
+                      </td>
+                      <td data-label="Knjigu izdao">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="book-rental-table-div knjige__content">
+                <table class="books-table book-rental-search-table">
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp; <span class="table-name">Naziv knjige</span
+                        ><i class="fa-solid fa-arrow-down"></i>
+                      </td>
+                      <td>Izdato uceniku</td>
+                      <td>Datum izdavanja</td>
+                      <td>Datum vracanja</td>
+                      <td>Zadrzavanje knjige</td>
+                      <td>Knjigu primio</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Geografija Crne Gore</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Pero Perovic</td>
+                      <td data-label="Datum izdavanja">21.02.2021</td>
+                      <td data-label="Datum vracanja">29.02.2021</td>
+                      <td data-label="Zadrzavanje knjige">
+                        2 nedelje i 3 dana
+                      </td>
+                      <td data-label="Knjigu primio">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Muzicka kultura</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                      <td data-label="Datum izdavanja">15.02.2022</td>
+                      <td data-label="Datum vracanja">20.02.2022</td>
+                      <td data-label="Zadrzavanje knjige">5 dana</td>
+                      <td data-label="Knjigu primio">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Tom Sojer</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Milos Milosevic</td>
+                      <td data-label="Datum izdavanja">12.05.2022</td>
+                      <td data-label="Datum vracanja">20.05.2022</td>
+                      <td data-label="Zadrzavanje knjige">
+                        1 nedelja i 4 dana
+                      </td>
+                      <td data-label="Knjigu primio">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Robinson Kruso</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                      <td data-label="Datum izdavanja">09.07.2022</td>
+                      <td data-label="Datum vracanja">15.08.2022</td>
+                      <td data-label="Zadrzavanje knjige" class="table-danger">
+                        7 nedelja i 6 dana
+                      </td>
+                      <td data-label="Knjigu primio">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Geografija Crne Gore</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Pero Perovic</td>
+                      <td data-label="Datum izdavanja">21.02.2022</td>
+                      <td data-label="Datum vracanja">15.04.2022</td>
+                      <td data-label="Zadrzavanje knjige" class="table-danger">
+                        8 nedelja i 3 dana
+                      </td>
+                      <td data-label="Knjigu primio">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Muzicka kultura</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                      <td data-label="Datum izdavanja">15.08.2022</td>
+                      <td data-label="Datum vracanja">20.08.2022</td>
+                      <td data-label="Zadrzavanje knjige">5 dana</td>
+                      <td data-label="Knjigu primio">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Tom Sojer</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Milos Milosevic</td>
+                      <td data-label="Datum izdavanja">01.09.2022</td>
+                      <td data-label="Datum vracanja">06.09.2022</td>
+                      <td data-label="Zadrzavanje knjige">5 dana</td>
+                      <td data-label="Knjigu primio">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Robinson Kruso</span>
+                      </td>
+                      <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                      <td data-label="Datum izdavanja">21.08.2022</td>
+                      <td data-label="Datum vracanja">15.09.2022</td>
+                      <td data-label="Zadrzavanje knjige">
+                        3 nedelje i 6 dana
+                      </td>
+                      <td data-label="Knjigu primio">Valentina Kascelan</td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="book-rental-table-div knjige__content">
+                <table class="books-table book-rental-search-table">
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp; <span class="table-name">Naziv knjige</span
+                        ><i class="fa-solid fa-arrow-down"></i>
+                      </td>
+                      <td>Datum izdavanja</td>
+                      <td>Izdato uceniku</td>
+                      <td>Prekoracenje u danima</td>
+                      <td>Trenutno zadrzavanje</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Geografija Crne Gore</span>
+                      </td>
+                      <td data-label="Datum izdavanja">21.02.2022</td>
+                      <td data-label="Izdato uceniku">Pero Perovic</td>
+                      <td
+                        data-label="Prekoracenje u danima"
+                        class="table-danger"
+                      >
+                        60 dana
+                      </td>
+                      <td data-label="Trenutno zadrzavanje">
+                        3 mjeseca i 3 dana
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Antigona</span>
+                      </td>
+                      <td data-label="Datum izdavanja">21.02.2022</td>
+                      <td data-label="Izdato uceniku">Nina Bulatovic</td>
+                      <td
+                        data-label="Prekoracenje u danima"
+                        class="table-danger"
+                      >
+                        31 dan
+                      </td>
+                      <td data-label="Trenutno zadrzavanje">
+                        2 mjeseca i 2 nedelje
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Dundo Maroje</span>
+                      </td>
+                      <td data-label="Datum izdavanja">01.05.2022</td>
+                      <td data-label="Izdato uceniku">Milos Milosevic</td>
+                      <td
+                        data-label="Prekoracenje u danima"
+                        class="table-danger"
+                      >
+                        31 dan
+                      </td>
+                      <td data-label="Trenutno zadrzavanje">
+                        2 mjeseca i 2 nedelje
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Robinson Kruso</span>
+                      </td>
+                      <td data-label="Datum izdavanja">09.04.2022</td>
+                      <td data-label="Izdato uceniku">Sanja Gardasevic</td>
+                      <td
+                        data-label="Prekoracenje u danima"
+                        class="table-danger"
+                      >
+                        15 dana
+                      </td>
+                      <td data-label="Trenutno zadrzavanje">
+                        1 mjesec i 2 nedelje
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Geografija Crne Gore</span>
+                      </td>
+                      <td data-label="Datum izdavanja">21.02.2022</td>
+                      <td data-label="Izdato uceniku">Pero Perovic</td>
+                      <td
+                        data-label="Prekoracenje u danima"
+                        class="table-danger"
+                      >
+                        7 dana
+                      </td>
+                      <td data-label="Trenutno zadrzavanje">
+                        1 mjesec i 1 nedelja
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Don Kihot</span>
+                      </td>
+                      <td data-label="Datum izdavanja">16.07.2022</td>
+                      <td data-label="Izdato uceniku">Pero Perovic</td>
+                      <td
+                        data-label="Prekoracenje u danima"
+                        class="table-danger"
+                      >
+                        6 dana
+                      </td>
+                      <td data-label="Trenutno zadrzavanje">
+                        4 nedelje i 6 dana
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Tom Sojer</span>
+                      </td>
+                      <td data-label="Datum izdavanja">12.06.2022</td>
+                      <td data-label="Izdato uceniku">Milos Milosevic</td>
+                      <td
+                        data-label="Prekoracenje u danima"
+                        class="table-danger"
+                      >
+                        3 dana
+                      </td>
+                      <td data-label="Trenutno zadrzavanje">
+                        4 nedelje i 3 dana
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Evgenije Onjegin</span>
+                      </td>
+                      <td data-label="Datum izdavanja">27.08.2022</td>
+                      <td data-label="Izdato uceniku">Pero Perovic</td>
+                      <td
+                        data-label="Prekoracenje u danima"
+                        class="table-danger"
+                      >
+                        2dana
+                      </td>
+                      <td data-label="Trenutno zadrzavanje">
+                        4 nedelje i 2 dana
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="book-rental-table-div knjige__content">
+                <table class="books-table book-rental-search-table">
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp; <span class="table-name">Naziv knjige</span
+                        ><i class="fa-solid fa-arrow-down"></i>
+                      </td>
+                      <td>Datum rezervacije</td>
+                      <td>Rezervacija istice</td>
+                      <td>Rezervaciju podnio</td>
+                      <td>Status</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Ep o Gilgamesu</span>
+                      </td>
+                      <td data-label="Datum rezervacije">31.04.2022</td>
+                      <td data-label="Rezervacija istice">10.05.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status">
+                        <i class="fa-solid fa-check"></i
+                        ><i class="fa-solid fa-xmark"></i>
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Ilijada</span>
+                      </td>
+                      <td data-label="Datum rezervacije">05.04.2022</td>
+                      <td data-label="Rezervacija istice">25.04.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status">
+                        <i class="fa-solid fa-check"></i
+                        ><i class="fa-solid fa-xmark"></i>
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Tom Sojer</span>
+                      </td>
+                      <td data-label="Datum rezervacije">18.05.2022</td>
+                      <td data-label="Rezervacija istice">02.06.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status">
+                        <i class="fa-solid fa-check"></i
+                        ><i class="fa-solid fa-xmark"></i>
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Robinson Kruso</span>
+                      </td>
+                      <td data-label="Datum rezervacije">25.06.2022</td>
+                      <td data-label="Rezervacija istice">24.07.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status">
+                        <i class="fa-solid fa-check"></i
+                        ><i class="fa-solid fa-xmark"></i>
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Ep o Gilgamesu</span>
+                      </td>
+                      <td data-label="Datum rezervacije">31.04.2022</td>
+                      <td data-label="Rezervacija istice">10.05.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-warning">
+                        Rezervisano
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Orlovi rano lete</span>
+                      </td>
+                      <td data-label="Datum rezervacije">30.07.2022</td>
+                      <td data-label="Rezervacija istice">10.08.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-warning">
+                        Rezervisano
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Ep o Gilgamesu</span>
+                      </td>
+                      <td data-label="Datum rezervacije">31.04.2022</td>
+                      <td data-label="Rezervacija istice">10.05.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-warning">
+                        Rezervisano
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="book-rental-table-div knjige__content">
+                <table class="books-table book-rental-search-table">
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp; <span class="table-name">Naziv knjige</span
+                        ><i class="fa-solid fa-arrow-down"></i>
+                      </td>
+                      <td>Datum rezervacije</td>
+                      <td>Rezervacija istice</td>
+                      <td>Rezervaciju podnio</td>
+                      <td>Status</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Na Drini Cuprija</span>
+                      </td>
+                      <td data-label="Datum rezervacije">31.04.2022</td>
+                      <td data-label="Rezervacija istice">10.05.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-success">
+                        Knjiga izdata
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Emocije</span>
+                      </td>
+                      <td data-label="Datum rezervacije">11.04.2022</td>
+                      <td data-label="Rezervacija istice">28.04.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-danger">
+                        Rezervacija istekla
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Sofijin svijet</span>
+                      </td>
+                      <td data-label="Datum rezervacije">28.05.2022</td>
+                      <td data-label="Rezervacija istice">20.06.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-danger">
+                        Rezervacija odbijena
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Homo Deus</span>
+                      </td>
+                      <td data-label="Datum rezervacije">08.06.2022</td>
+                      <td data-label="Rezervacija istice">11.06.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-danger">
+                        Rezervacija otkazana
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Na Drini Cuprija</span>
+                      </td>
+                      <td data-label="Datum rezervacije">11.07.2022</td>
+                      <td data-label="Rezervacija istice">07.08.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-success">
+                        Knjiga izdata
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Emocije</span>
+                      </td>
+                      <td data-label="Datum rezervacije">16.08.2022</td>
+                      <td data-label="Rezervacija istice">28.08.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-danger">
+                        Rezervacija istekla
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Sofijin svijet</span>
+                      </td>
+                      <td data-label="Datum rezervacije">22.08.2022</td>
+                      <td data-label="Rezervacija istice">10.09.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-danger">
+                        Rezervacija odbijena
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td data-label="Naziv knjige">
+                        <input
+                          type="checkbox"
+                          name="ime"
+                          class="checkbox"
+                        />&nbsp;<span
+                          ><img
+                            src="images/book-cover.jpg"
+                            alt="book-cover"
+                            class="book-cover-img"
+                        /></span>
+                        <span class="table-name">Homo Deus</span>
+                      </td>
+                      <td data-label="Datum rezervacije">07.09.2022</td>
+                      <td data-label="Rezervacija istice">25.09.2022</td>
+                      <td data-label="Rezervaciju podnio">Pero Perovic</td>
+                      <td data-label="Status" class="table-danger">
+                        Rezervacija otkazana
+                      </td>
+                      <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- end .book-rental-tabs -->
+          </div>
+          <!-- end .book-rental-table -->
+        </div>
+        <!-- end .book-rental-main-content -->
+      </div>
+      <!-- end .book-rental-content -->
+    </section>
+    <!-- end .dashboard-->
+
+    <script src="app/script.js"></script>
+    <script src="app/book-rental.js"></script>
+  </body>
+</html>

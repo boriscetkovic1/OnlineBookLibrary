@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <nav class="close">
+      <div class="logo-name">
+        <a href="../index.html"
+          ><h1>B<span class="link-name">iblioteka</span></h1></a
+        >
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html">
+              <i class="fa-solid fa-gauge"></i>
+              <span class="link-name">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../librarians.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Bibliotekari</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../students.html">
+              <i class="fa-solid fa-users"></i>
+              <span class="link-name">Ucenici</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../books.html">
+              <i class="fa-solid fa-copy"></i>
+              <span class="link-name">Knjige</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../authors.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Autori</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../book-rental.html">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              <span class="link-name">Izdavanje knjiga</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="settings">
+          <li>
+            <a href="../settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span class="link-name">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <header>
+        <div class="top">
+          <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+          <div class="user-settings">
+            <div class="create-users">
+              <a href="#" class="user-create-btn">Kreiraj</a>
+            </div>
+
+            <div class="dash-new-users hidden">
+              <ul>
+                <li>
+                  <a href="new-librarian.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Bibliotekar</a
+                  >
+                </li>
+                <li>
+                  <a href="new-student.html"
+                    ><span><i class="fa-solid fa-users"></i></span>Ucenik</a
+                  >
+                </li>
+                <li>
+                  <a href="new-book.html"
+                    ><span><i class="fa-solid fa-book"></i></span>Knjiga</a
+                  >
+                </li>
+                <li>
+                  <a href="new-author.html"
+                    ><span><i class="fa-regular fa-address-book"></i></span
+                    >Autor</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .dash-new-users -->
+
+            <div class="account-profile-options hidden">
+              <ul>
+                <li>
+                  <a href="../store-content-info/single-admin-info.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-right-from-bracket"></i></span
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .account-profile-options-hidden-->
+
+            <div class="user-account">
+              <a href="#" class="user-profile-options"
+                ><img src="../images/accounts.jpg" alt="profile-photo"
+              /></a>
+            </div>
+            <!-- end .user-account -->
+          </div>
+        </div>
+      </header>
+
+      <div class="new-book new-content">
+        <div class="overview">
+          <div class="title">
+            <h2>Nova knjiga</h2>
+          </div>
+        </div>
+        <!-- end .overview -->
+
+        <div class="knjiga-data new-user-data">
+          <div class="user-data book-data">
+            <label for="knjiga-name">Naziv knjige</label>
+            <input type="text" name="knjiga-name" id="knjiga-name" />
+
+            <label for="knjiga-description">Kratki sadrzaj</label>
+            <textarea
+              name="knjiga-description"
+              id="knjiga-description"
+            ></textarea>
+
+            <label for="book-categories">Izaberite kategorije</label>
+            <input
+              type="text"
+              name="book-categories"
+              id="book-categories"
+              placeholder="Udzbenici  Romani"
+            />
+
+            <label for="book-genre">Izaberite zanrove</label>
+            <input
+              type="text"
+              name="book-genre"
+              id="book-genre"
+              placeholder="Poezija  Strucna literatura"
+            />
+
+            <label for="book-genre">Izaberite autore</label>
+            <input
+              type="text"
+              name="book-authors"
+              id="book-authors"
+              placeholder="Mark Twain  Pero Peric"
+            />
+
+            <label for="book-publisher">Izdavac</label>
+            <select name="book-publisher" id="book-publisher">
+              <option value="#">&nbsp;</option>
+              <option value="pp">Pero Peric</option>
+              <option value="zz">Zika Zikic</option>
+              <option value="mm">Mika Mikic</option>
+            </select>
+
+            <label for="publication-year">Godina izdavanja</label>
+            <select name="publication-year" id="publication-year">
+              <option value="#">&nbsp;</option>
+              <option value="98">1998</option>
+              <option value="99">1999</option>
+              <option value="00">2000</option>
+              <option value="03">2003</option>
+              <option value="07">2007</option>
+              <option value="11">2011</option>
+              <option value="12">2012</option>
+              <option value="13">2013</option>
+              <option value="14">2014</option>
+              <option value="15">2015</option>
+              <option value="19">2019</option>
+              <option value="20">2020</option>
+              <option value="21">2021</option>
+              <option value="22">2022</option>
+            </select>
+
+            <label for="letter">Pismo</label>
+            <select name="letter" id="letter">
+              <option value="#">&nbsp;</option>
+              <option value="cr">Cirilica</option>
+              <option value="lt">Latinica</option>
+              <option value="ar">Arapsko</option>
+              <option value="kn">Kinesko</option>
+            </select>
+          </div>
+          <!-- end .user-data -->
+
+          <div class="book-more-options user-add-photo">
+            <label for="add-photo-3">Dodaj multimediju</label>
+            <input
+              type="file"
+              name="add-photo-3"
+              id="add-photo-3"
+              class="add-user-photo"
+            />
+          </div>
+          <!-- end .book-more-options -->
+        </div>
+        <!-- end .knjiga-data -->
+
+        <div class="new-user-action-buttons">
+          <a href="../books.html" class="btn-cancel">Ponisti</a>
+          <a href="../books.html" class="btn-save">Sacuvaj</a>
+        </div>
+      </div>
+      <!-- end .new-book -->
+    </section>
+    <!-- end .dashboard-->
+
+    <script src="../app/script.js"></script>
+  </body>
+</html>

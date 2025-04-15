@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezervisi knjigu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      href="../../images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+  <body>
+    <nav class="close">
+      <div class="logo-name">
+        <a href="../../index.html"
+          ><h1>B<span class="link-name">iblioteka</span></h1></a
+        >
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="../../index.html">
+              <i class="fa-solid fa-gauge"></i>
+              <span class="link-name">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../../librarians.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Bibliotekari</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../../students.html">
+              <i class="fa-solid fa-users"></i>
+              <span class="link-name">Ucenici</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../../books.html">
+              <i class="fa-solid fa-copy"></i>
+              <span class="link-name">Knjige</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../../authors.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Autori</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../../book-rental.html">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              <span class="link-name">Izdavanje knjiga</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="settings">
+          <li>
+            <a href="../../settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span class="link-name">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <header>
+        <div class="top">
+          <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+          <div class="user-settings">
+            <div class="create-users">
+              <a href="#" class="user-create-btn">Kreiraj</a>
+            </div>
+
+            <div class="dash-new-users hidden">
+              <ul>
+                <li>
+                  <a href="../../new-content/new-librarian.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Bibliotekar</a
+                  >
+                </li>
+                <li>
+                  <a href="../../new-content/new-student.html"
+                    ><span><i class="fa-solid fa-users"></i></span>Ucenik</a
+                  >
+                </li>
+                <li>
+                  <a href="../../new-content/new-book.html"
+                    ><span><i class="fa-solid fa-book"></i></span>Knjiga</a
+                  >
+                </li>
+                <li>
+                  <a href="../../new-content/new-author.html"
+                    ><span><i class="fa-regular fa-address-book"></i></span
+                    >Autor</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .dash-new-users -->
+
+            <div class="account-profile-options hidden">
+              <ul>
+                <li>
+                  <a href="../../store-content-info/single-admin-info.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-right-from-bracket"></i></span
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .account-profile-options-hidden-->
+
+            <div class="user-account">
+              <a href="#" class="user-profile-options"
+                ><img src="../../images/accounts.jpg" alt="profile-photo"
+              /></a>
+            </div>
+            <!-- end .user-account -->
+          </div>
+        </div>
+      </header>
+
+      <div class="book-modal">
+        <div class="overview">
+          <div class="title">
+            <h2>Tom Sojer</h2>
+            <p>
+              <a href="../../books.html">Evidencija knjiga</a> / Knjiga - 467
+            </p>
+          </div>
+
+          <div class="single-user-profile-options">
+            <ul>
+              <li>
+                <a href="release-the-book.html"
+                  ><i class="fa-solid fa-arrow-turn-up"></i> Otpisi knjigu</a
+                >
+              </li>
+              <li>
+                <a href="rent-a-book.html"
+                  ><i class="fa-solid fa-pen-to-square"></i> Izdaj knjigu</a
+                >
+              </li>
+              <li>
+                <a href="return-the-book.html"
+                  ><i class="fa-solid fa-arrow-rotate-right"></i> Vrati
+                  knjigu</a
+                >
+              </li>
+              <li>
+                <a href="reserve-a-book.html"
+                  ><i class="fa-solid fa-calendar-days"></i> Rezervisi knjigu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../single-book-info.html"
+                  class="all-single-user-profile-options"
+                  ><i class="fa-solid fa-ellipsis-vertical"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end .overview -->
+
+        <div class="single-book-options-content">
+          <h3>Rezervisi knjigu</h3>
+
+          <div class="new-user-data">
+            <div class="user-data">
+              <label for="choose-the-student"
+                >Izaberi ucenika na koga se knjiga rezervise</label
+              >
+              <select name="choose-the-student" id="choose-the-student">
+                <option value="nn">Nemanja Nikcevic</option>
+                <option value="tz">Tamara Zdravkovic.</option>
+                <option value="in">Ivana Nikolic</option>
+                <option value="vn">Vanja Lalatovic</option>
+                <option value="ls">Larisa Sipcic</option>
+                <option value="gd">Goran Djurovic</option>
+              </select>
+
+              <label for="book-rental-date">Datum izdavanja</label>
+              <input
+                type="date"
+                name="book-rental-date"
+                id="book-rental-date"
+              />
+
+              <label for="book-rental-return-date">Datum vracanja</label>
+              <input
+                type="date"
+                name="book-rental-return-date"
+                id="book-rental-return-date"
+              />
+            </div>
+            <!-- end .user-data -->
+          </div>
+          <!-- end .new-user-data -->
+        </div>
+        <!-- end .single-book-options-content-->
+      </div>
+      <!-- end .book-modal -->
+
+      <div class="new-user-action-buttons">
+        <a href="../single-book-info.html" class="btn-cancel">Ponisti</a>
+        <a href="../single-book-info.html" class="btn-save">Rezervisi knjigu</a>
+      </div>
+    </section>
+    <!-- end .dashboard-->
+
+    <script src="../../app/script.js"></script>
+  </body>
+</html>

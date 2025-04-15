@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Book Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <nav class="close">
+      <div class="logo-name">
+        <a href="index.html"
+          ><h1>B<span class="link-name">iblioteka</span></h1></a
+        >
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-gauge"></i>
+              <span class="link-name">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="librarians.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Bibliotekari</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="students.html">
+              <i class="fa-solid fa-users"></i>
+              <span class="link-name">Ucenici</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="books.html">
+              <i class="fa-solid fa-copy"></i>
+              <span class="link-name">Knjige</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="authors.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Autori</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="book-rental.html">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              <span class="link-name">Izdavanje knjiga</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="settings">
+          <li>
+            <a href="settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span class="link-name">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <header>
+        <div class="top">
+          <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+          <div class="user-settings">
+            <div class="create-users">
+              <a href="#" class="user-create-btn">Kreiraj</a>
+            </div>
+            <!-- end .create-users -->
+
+            <div class="dash-new-users hidden">
+              <ul>
+                <li>
+                  <a href="new-content/new-librarian.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Bibliotekar</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-student.html"
+                    ><span><i class="fa-solid fa-users"></i></span>Ucenik</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-book.html"
+                    ><span><i class="fa-solid fa-book"></i></span>Knjiga</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-author.html"
+                    ><span><i class="fa-regular fa-address-book"></i></span
+                    >Autor</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .dash-new-users -->
+
+            <div class="account-profile-options hidden">
+              <ul>
+                <li>
+                  <a href="store-content-info/single-admin-info.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-right-from-bracket"></i></span
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .account-profile-options-hidden-->
+
+            <div class="user-account">
+              <a href="#" class="user-profile-options"
+                ><img src="images/accounts.jpg" alt="profile-photo"
+              /></a>
+            </div>
+            <!-- end .user-account -->
+          </div>
+          <!-- end .user-settings -->
+        </div>
+        <!-- end .top -->
+      </header>
+
+      <div class="dash-content">
+        <div class="overview">
+          <div class="title">
+            <h1>Dashboard</h1>
+          </div>
+        </div>
+        <!-- end .overview -->
+
+        <div class="dash-main-content">
+          <div class="dash-activities">
+            <h2>Aktivnosti</h2>
+
+            <div class="single-activity">
+              <div class="user-photo">
+                <img src="images/jelena.jpg" alt="jelena" />
+              </div>
+
+              <div class="activity-info">
+                <div class="time">Izdavanje knjige - 4 days ago</div>
+                <div class="activity-details">
+                  <p>
+                    <a href="store-content-info/single-librarian-info.html"
+                      >Jelena C</a
+                    >
+                    je izdala knjigu <span class="bold-info">Tom Sojer</span>
+                    <a href="store-content-info/single-student-info.html"
+                      >Peru Perovicu</a
+                    >
+                    <span class="bold-info">dana 21.02.2021</span>
+                    <a href="store-content-info/single-book-info.html"
+                      >pogledaj detalje &raquo;</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end .activity-info -->
+            </div>
+            <!-- end single-activity -->
+
+            <div class="single-activity">
+              <div class="user-photo">
+                <img src="images/accounts.jpg" alt="boris" />
+              </div>
+
+              <div class="activity-info">
+                <div class="time">Izdavanje knjige - 11 days ago</div>
+                <div class="activity-details">
+                  <p>
+                    <a href="store-content-info/single-librarian-info.html"
+                      >Boris C.</a
+                    >
+                    je izdao knjigu
+                    <span class="bold-info"> Robinson Kruso</span>
+                    <a href="store-content-info/single-student-info.html"
+                      >Nini Nikolic</a
+                    >
+                    <span class="bold-info">dana 27.04.2022</span>
+                    <a href="store-content-info/single-book-info.html"
+                      >pogledaj detalje &raquo;</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end .activity-info -->
+            </div>
+            <!-- end single-activity -->
+
+            <div class="single-activity">
+              <div class="user-photo">
+                <img src="images/snezana.jpg" alt="snezana" />
+              </div>
+
+              <div class="activity-info">
+                <div class="time">Izdavanje knjige - 4 days ago</div>
+                <div class="activity-details">
+                  <p>
+                    <a href="store-content-info/single-librarian-info.html"
+                      >Snezana Z.</a
+                    >
+                    je izdala knjigu
+                    <span class="bold-info"> Na Drini Cuprija</span>
+                    <a href="store-content-info/single-student-info.html"
+                      >Nini Nikolic</a
+                    >
+                    <span class="bold-info">dana 17.07.2022</span>
+                    <a href="store-content-info/single-book-info.html"
+                      >pogledaj detalje &raquo;</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end .activity-info -->
+            </div>
+            <!-- end single-activity -->
+
+            <div class="single-activity">
+              <div class="user-photo">
+                <img src="images/accounts.jpg" alt="borisa" />
+              </div>
+
+              <div class="activity-info">
+                <div class="time">Izdavanje knjige - 11 days ago</div>
+                <div class="activity-details">
+                  <p>
+                    <a href="store-content-info/single-librarian-info.html"
+                      >Boris C.</a
+                    >
+                    je izdao knjigu
+                    <span class="bold-info"> Na Drini Cuprija</span>
+                    <a href="store-content-info/single-student-info.html"
+                      >Ziki Zivicu</a
+                    >
+                    <span class="bold-info">dana 27.08.2022</span>
+                    <a href="store-content-info/single-book-info.html"
+                      >pogledaj detalje &raquo;</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end .activity-info -->
+            </div>
+            <!-- end single-activity -->
+
+            <div class="single-activity">
+              <div class="user-photo">
+                <img src="images/nadja.jpg" alt="nadja" />
+              </div>
+
+              <div class="activity-info">
+                <div class="time">Nova knjiga - 9 months ago</div>
+                <div class="activity-details">
+                  <p>
+                    <a href="store-content-info/single-librarian-info.html"
+                      >Nadja C.</a
+                    >
+                    je unijela knjigu
+                    <span class="bold-info"> Na Drini Cuprija</span>
+                    <span class="bold-info">dana 27.08.2022</span>
+                    <a href="store-content-info/single-book-info.html"
+                      >pogledaj detalje &raquo;</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end .activity-info -->
+            </div>
+            <!-- end single-activity -->
+
+            <div class="single-activity">
+              <div class="user-photo">
+                <img src="images/accounts.jpg" alt="boki" />
+              </div>
+
+              <div class="activity-info">
+                <div class="time">Izdavanje knjige - 15 days ago</div>
+                <div class="activity-details">
+                  <p>
+                    <a href="store-content-info/single-librarian-info.html"
+                      >Boris C.</a
+                    >
+                    je izdao knjigu
+                    <span class="bold-info"> Robinson Kruso</span>
+                    <a href="store-content-info/single-student-info.html"
+                      >Miki Mikicu</a
+                    >
+                    <span class="bold-info">dana 09.09.2022</span>
+                    <a href="store-content-info/single-book-info.html"
+                      >pogledaj detalje &raquo;</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end .activity-info -->
+            </div>
+            <!-- end single-activity -->
+
+            <div class="single-activity">
+              <div class="user-photo">
+                <img src="images/snezanac.jpg" alt="snegi" />
+              </div>
+
+              <div class="activity-info">
+                <div class="time">Izdavanje knjige - 4 days ago</div>
+                <div class="activity-details">
+                  <p>
+                    <a href="store-content-info/single-librarian-info.html"
+                      >Snezana C.</a
+                    >
+                    je izdala knjigu
+                    <span class="bold-info"> Orlovi rano lete</span>
+                    <a href="store-content-info/single-student-info.html"
+                      >Ani Pekovic</a
+                    >
+                    <span class="bold-info">dana 02.10.2022</span>
+                    <a href="store-content-info/single-book-info.html"
+                      >pogledaj detalje &raquo;</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end .activity-info -->
+            </div>
+            <!-- end single-activity -->
+
+            <div class="dashboard-hidden-activities hidden">
+              <div class="single-activity">
+                <div class="user-photo">
+                  <img src="images/accounts.jpg" alt="borisa" />
+                </div>
+
+                <div class="activity-info">
+                  <div class="time">Izdavanje knjige - 11 days ago</div>
+                  <div class="activity-details">
+                    <p>
+                      <a href="store-content-info/single-librarian-info.html"
+                        >Boris C.</a
+                      >
+                      je izdao knjigu
+                      <span class="bold-info"> Na Drini Cuprija</span>
+                      <a href="store-content-info/single-student-info.html"
+                        >Ziki Zivicu</a
+                      >
+                      <span class="bold-info">dana 27.08.2022</span>
+                      <a href="store-content-info/single-book-info.html"
+                        >pogledaj detalje &raquo;</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- end .activity-info -->
+              </div>
+              <!-- end single-activity -->
+
+              <div class="single-activity">
+                <div class="user-photo">
+                  <img src="images/nadja.jpg" alt="nadja" />
+                </div>
+
+                <div class="activity-info">
+                  <div class="time">Nova knjiga - 9 months ago</div>
+                  <div class="activity-details">
+                    <p>
+                      <a href="store-content-info/single-librarian-info.html"
+                        >Nadja C.</a
+                      >
+                      je unijela knjigu
+                      <span class="bold-info"> Na Drini Cuprija</span>
+                      <span class="bold-info">dana 27.08.2022</span>
+                      <a href="store-content-info/single-book-info.html"
+                        >pogledaj detalje &raquo;</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- end .activity-info -->
+              </div>
+              <!-- end single-activity -->
+
+              <div class="single-activity">
+                <div class="user-photo">
+                  <img src="images/accounts.jpg" alt="boki" />
+                </div>
+
+                <div class="activity-info">
+                  <div class="time">Izdavanje knjige - 15 days ago</div>
+                  <div class="activity-details">
+                    <p>
+                      <a href="store-content-info/single-librarian-info.html"
+                        >Boris C.</a
+                      >
+                      je izdao knjigu
+                      <span class="bold-info"> Robinson Kruso</span>
+                      <a href="store-content-info/single-student-info.html"
+                        >Miki Mikicu</a
+                      >
+                      <span class="bold-info">dana 09.09.2022</span>
+                      <a href="store-content-info/single-book-info.html"
+                        >pogledaj detalje &raquo;</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- end .activity-info -->
+              </div>
+              <!-- end single-activity -->
+
+              <div class="single-activity">
+                <div class="user-photo">
+                  <img src="images/snezanac.jpg" alt="snegi" />
+                </div>
+
+                <div class="activity-info">
+                  <div class="time">Izdavanje knjige - 4 days ago</div>
+                  <div class="activity-details">
+                    <p>
+                      <a href="store-content-info/single-librarian-info.html"
+                        >Snezana C.</a
+                      >
+                      je izdala knjigu
+                      <span class="bold-info"> Orlovi rano lete</span>
+                      <a href="store-content-info/single-student-info.html"
+                        >Ani Pekovic</a
+                      >
+                      <span class="bold-info">dana 02.10.2022</span>
+                      <a href="store-content-info/single-book-info.html"
+                        >pogledaj detalje &raquo;</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- end .activity-info -->
+              </div>
+              <!-- end single-activity -->
+            </div>
+
+            <div class="show-all-activities-btn">
+              <button class="showAll">Show</button>
+            </div>
+            <!-- end .show-all-activities-btn -->
+          </div>
+          <!-- end dash-activities -->
+
+          <div class="reservations-statistics">
+            <h3>Rezervacije knjiga</h3>
+
+            <div class="dashboard-reservation">
+              <div><i class="fa-regular fa-user"></i>Pero Perovic</div>
+              <div>Ep o Gilgamesu</div>
+              <div class="dashboard-reservation-date">31.04.2022</div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- end .dashboard-reservation -->
+
+            <div class="dashboard-reservation">
+              <div><i class="fa-regular fa-user"></i>Pero Perovic</div>
+              <div>Ep o Gilgamesu</div>
+              <div class="dashboard-reservation-date">11.05.2022</div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- end .dashboard-reservation -->
+
+            <div class="dashboard-reservation">
+              <div><i class="fa-regular fa-user"></i>Pero Perovic</div>
+              <div>Ep o Gilgamesu</div>
+              <div class="dashboard-reservation-date">22.08.2022</div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- end .dashboard-reservation -->
+
+            <div class="dashboard-reservation">
+              <div><i class="fa-regular fa-user"></i>Pero Perovic</div>
+              <div>Ep o Gilgamesu</div>
+              <div class="dashboard-reservation-date">01.09.2022</div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- end .dashboard-reservation -->
+
+            <div class="dashboard-reservation-show-all">
+              <a href="book-rental.html"
+                ><span
+                  ><i class="fa-solid fa-calendar-days"></i> Prikazi sve</span
+                ></a
+              >
+            </div>
+            <!-- end .dashboard-reservation-show-all -->
+
+            <div class="dashboard-statistics">
+              <h3>Statistika</h3>
+            </div>
+
+            <div class="chart-wrapper">
+              <div><canvas id="barChart"></canvas></div>
+            </div>
+            <!-- end .chart-wrapper-->
+          </div>
+          <!-- end .reservations-statistics -->
+        </div>
+        <!-- end .dash-main-content -->
+      </div>
+      <!-- end .dash-content -->
+    </section>
+    <!-- end .dashboard-->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="app/script.js"></script>
+    <script src="app/index.js"></script>
+  </body>
+</html>

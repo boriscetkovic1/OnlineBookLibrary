@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <nav class="close">
+      <div class="logo-name">
+        <a href="index.html"
+          ><h1>B<span class="link-name">iblioteka</span></h1></a
+        >
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-gauge"></i>
+              <span class="link-name">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="librarians.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Bibliotekari</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="students.html">
+              <i class="fa-solid fa-users"></i>
+              <span class="link-name">Ucenici</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="books.html">
+              <i class="fa-solid fa-copy"></i>
+              <span class="link-name">Knjige</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="authors.html">
+              <i class="fa-solid fa-address-book"></i>
+              <span class="link-name">Autori</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="book-rental.html">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              <span class="link-name">Izdavanje knjiga</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="settings">
+          <li>
+            <a href="settings.html">
+              <i class="fa-solid fa-gear"></i>
+              <span class="link-name">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <header>
+        <div class="top">
+          <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+          <div class="user-settings">
+            <div class="create-users">
+              <a href="#" class="user-create-btn">Kreiraj</a>
+            </div>
+
+            <div class="dash-new-users hidden">
+              <ul>
+                <li>
+                  <a href="new-content/new-librarian.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Bibliotekar</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-student.html"
+                    ><span><i class="fa-solid fa-users"></i></span>Ucenik</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-book.html"
+                    ><span><i class="fa-solid fa-book"></i></span>Knjiga</a
+                  >
+                </li>
+                <li>
+                  <a href="new-content/new-author.html"
+                    ><span><i class="fa-regular fa-address-book"></i></span
+                    >Autor</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .dash-new-users -->
+
+            <div class="account-profile-options hidden">
+              <ul>
+                <li>
+                  <a href="store-content-info/single-admin-info.html"
+                    ><span><i class="fa-solid fa-address-book"></i></span
+                    >Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-right-from-bracket"></i></span
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end .account-profile-options-hidden-->
+
+            <div class="user-account">
+              <a href="#" class="user-profile-options"
+                ><img src="images/accounts.jpg" alt="profile-photo"
+              /></a>
+            </div>
+            <!-- end .user-account -->
+          </div>
+        </div>
+      </header>
+
+      <div class="students-content">
+        <div class="overview">
+          <div class="title">
+            <h1>Ucenici</h1>
+          </div>
+        </div>
+        <!-- end .overview -->
+
+        <div class="members">
+          <div class="new-member">
+            <a href="new-content/new-student.html">Novi ucenik</a>
+          </div>
+
+          <div class="search-members">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            <input
+              type="text"
+              placeholder="Search.."
+              name="search"
+              onkeyup="searchFunction()"
+              id="students-search"
+            />
+          </div>
+        </div>
+        <!-- end .members-->
+
+        <div class="table-container">
+          <table id="students-table">
+            <thead>
+              <tr>
+                <td>
+                  <input type="checkbox" name="ime" class="checkbox" />&nbsp;
+                  <span class="table-name">Ime i prezime</span
+                  ><i class="fa-solid fa-arrow-down"></i>
+                </td>
+                <td>Email</td>
+                <td>Tip korisnika</td>
+                <td>Zadnji pristup sistemu</td>
+                <td>&nbsp;</td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td data-label="Ime i prezime">
+                  <input
+                    type="checkbox"
+                    name="ime"
+                    class="checkbox"
+                  />&nbsp;<img src="images/jelena.jpg" alt="pero perovic" />
+                  <span class="table-name">Milica Milic</span>
+                </td>
+                <td data-label="Email">milicamilic@domain.com</td>
+                <td data-label="Tip korisnika">Ucenik</td>
+                <td data-label="Zadnji pristup sistemu">Prije 10 sati</td>
+                <td>
+                  <a href="store-content-info/single-student-info.html"
+                    ><i class="fa-solid fa-ellipsis-vertical"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Ime i prezime">
+                  <input
+                    type="checkbox"
+                    name="ime"
+                    class="checkbox"
+                  />&nbsp;<img src="images/snezana.jpg" alt="pero perovic" />
+                  <span class="table-name">Andjela Nikolic</span>
+                </td>
+                <td data-label="Email">andjelan@gmail.com</td>
+                <td data-label="Tip korisnika">Ucenik</td>
+                <td data-label="Zadnji pristup sistemu">Prije 2 dana</td>
+                <td>
+                  <a href="store-content-info/single-student-info.html"
+                    ><i class="fa-solid fa-ellipsis-vertical"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Ime i prezime">
+                  <input
+                    type="checkbox"
+                    name="ime"
+                    class="checkbox"
+                  />&nbsp;<img src="images/accounts.jpg" alt="pero perovic" />
+                  <span class="table-name">Pero Perovic</span>
+                </td>
+                <td data-label="Email">pero.perovic@domain.com</td>
+                <td data-label="Tip korisnika">Ucenik</td>
+                <td data-label="Zadnji pristup sistemu">
+                  Nije se nikad ulogovao
+                </td>
+                <td>
+                  <a href="store-content-info/single-student-info.html"
+                    ><i class="fa-solid fa-ellipsis-vertical"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Ime i prezime">
+                  <input
+                    type="checkbox"
+                    name="ime"
+                    class="checkbox"
+                  />&nbsp;<img src="images/vladimir.jpg" alt="pero perovic" />
+                  <span class="table-name">Zika Zivic</span>
+                </td>
+                <td data-label="Email">zikaz@yahoo.com</td>
+                <td data-label="Tip korisnika">Ucenik</td>
+                <td data-label="Zadnji pristup sistemu">Prije 2 nedelje</td>
+                <td>
+                  <a href="store-content-info/single-student-info.html"
+                    ><i class="fa-solid fa-ellipsis-vertical"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- end .table-container -->
+      </div>
+      <!-- end .students-content -->
+    </section>
+    <!-- end .dashboard-->
+
+    <script src="app/script.js"></script>
+    <script src="app/students.js"></script>
+  </body>
+</html>
